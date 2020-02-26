@@ -6,3 +6,4 @@
         a.  Added navbar
         b.  Added icon
     3. Added app.css in public directory
+3.  NEW and CREATE routes
