@@ -62,7 +62,20 @@ app.post("/blogs", function(req, res){
             res.redirect("/blogs")
         }
     })
-})
+});
+
+// SHOW route
+app.get("/blogs/:id", function(req, res){
+    // ? Why is whitespace being inserted in req.params.id ?
+    Blog.findById(req.params.id.trim(), function(err, foundBlog){
+        if(err){
+            // TODO better error handling
+            res.redirect("/blogs");
+        } else {
+            res.render("show", {blog: foundBlog})
+        }
+    });
+});
 
 app.listen(3000, function(){
     console.log("Serving Blog at port 3000...");
