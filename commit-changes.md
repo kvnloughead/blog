@@ -34,4 +34,9 @@
        less work ignoring or modifying REST.
 
 6.  Added DESTROY route and buttons for both Edit and Destroy.
+
+7.  Last part coding along with Colt
+    a.  Sanitize blog body (with express-sanitizer)
+    b.  Style index page
+     
       

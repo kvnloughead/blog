@@ -1,5 +1,6 @@
 const express = require("express"),
       methodOverride = require("method-override"),
+      expressSanitizer = require("express-sanitizer"),
       bodyParser = require("body-parser"),
       mongoose = require("mongoose"),
       request = require("request"),
@@ -13,6 +14,7 @@ mongoose.connect("mongodb://localhost:27017/blog", {
 });
 
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(expressSanitizer()) // must follow app.use(bodyParser...)
 app.use(express.static("public"));
 app.use(methodOverride("_method")); 
 app.set("view engine", "ejs");
@@ -50,6 +52,12 @@ app.get("/blogs", function(req, res){
     });
 });
 
+// GET route for RESTfulTable
+// TODO work out how to serve pages from a directory, so I can write posts in VScode, not just in browser
+app.get("/blogs/RESTfulTable", function(req, res){
+    res.render("RESTfulTable")
+})
+
 // NEW route
 app.get("/blogs/new", function(req, res){
     res.render("new")
@@ -58,6 +66,7 @@ app.get("/blogs/new", function(req, res){
 // CREATE route
 app.post("/blogs", function(req, res){
     // create blog post
+    req.body.blog.body = req.sanitize(req.body.blog.body);
     Blog.create(req.body.blog, function(err, newBlog){
         if(err){
             res.render("new");
@@ -94,6 +103,7 @@ app.get("/blogs/:id/edit", function(req, res){
 
 // UPDATE route
 app.put("/blogs/:id", function(req, res){
+    req.body.blog.body = req.sanitize(req.body.blog.body);
     Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(err, updateBlog){
         if(err){
             // TODO better error handling
@@ -115,6 +125,7 @@ app.delete("/blogs/:id", function(req, res){
         }
     })
 });
+
 
 app.listen(3000, function(){
     console.log("Serving Blog at port 3000...");

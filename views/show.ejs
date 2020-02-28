@@ -9,7 +9,6 @@
                 <span><%= blog.created.toDateString() %></span>
             </div>
             <div class="description">
-                <!-- TODO sanitize for script tags -->
                 <p><%- blog.body %> </p>
             </div>
             <a class="ui brown basic button" href="/blogs/<%= blog._id %>/edit">
