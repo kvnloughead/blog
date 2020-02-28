@@ -32,4 +32,6 @@
        This basically just allows us to use PUT or DELETE requests when for some reason we would otherwise be railroaded into using
        GET or POST, thus allowing us to remain RESTful.   Seems rather unnecessary to me, when one could achieve the same effect with
        less work ignoring or modifying REST.
+
+6.  Added DESTROY route and buttons for both Edit and Destroy.
       
