@@ -16,11 +16,21 @@
     />
   </head>
   <body>
-    <nav>
-      <a href="/">Home</a>
-    </nav>
-    <!-- Grab content from the page data and mark it as safe -->
-    <!-- https://mozilla.github.io/nunjucks/templating.html#safe -->
-    {{ content | safe }}
+    <header class="header">
+      <nav class="nav">
+        <a class="nav__link" href="/">Home</a>
+        <a class="nav__link" href="/#projects">Projects</a>
+        <a class="nav__link" href="/blog">Blog</a>
+        <a class="nav__link" href="/about">About</a>
+        <a class="nav__link" href="/#contact">Contact</a>
+      </nav>
+    </header>
+    <main class="main">
+      {{ content | safe }}
+    </main>
+    <footer class="footer">
+      <h2>Contact Me</h2>
+      <nav></nav>
+    </footer>
   </body>
 </html>

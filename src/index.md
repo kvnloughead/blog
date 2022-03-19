@@ -1,21 +1,9 @@
 ---
 layout: base.njk
-title: 'The Best Eleventy Demo TM'
+title: 'Kevin Loughead, Software Engineer'
+name: 'Kevin Loughead'
 ---
 
-<!-- <h1>Index page</h1>
-<p>Here are my posts</p> -->
+# Hello, world
 
-# Index page
-
-Here are my posts
-
-{% include "postlist.njk" %}
-
-<!-- <ul>
-  {% for post in collections.post %}
-  <li>
-    <a href="{{ post.url }}">{{ post.data.title }}</a>
-  </li>
-  {% endfor %}
-</ul> -->
+This is where my portfolio will be, I think.
