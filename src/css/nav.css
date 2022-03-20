@@ -1,0 +1,16 @@
+.nav {
+  display: flex;
+  align-items: center;
+  height: 54px;
+}
+
+.nav__link {
+  margin: 8px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.nav__link:first-of-type {
+  margin-right: auto;
+}

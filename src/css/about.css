@@ -1,0 +1,38 @@
+.about {
+  padding: 90px 0;
+  max-width: 780px;
+  height: 95vh;
+  max-height: 1000px;
+  box-sizing: border-box;
+  margin: 0 auto;
+  display: grid;
+  align-items: center;
+  grid-template-areas: 'about image' 'text text';
+  gap: 60px;
+}
+
+.about__details {
+  grid-area: about;
+}
+.about__name {
+  font-size: 56px;
+}
+
+.about__job {
+  font-size: 24px;
+  grid-area: job;
+}
+
+.about__image {
+  grid-area: image;
+  justify-self: flex-end;
+  border-radius: 9999px;
+  max-width: 100%;
+}
+
+.about__description {
+  align-self: flex-start;
+  grid-area: text;
+  font-size: 20px;
+  line-height: 1.5;
+}
