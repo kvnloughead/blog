@@ -1,0 +1,14 @@
+.projects {
+  max-width: 1080px;
+  margin: 0 auto;
+}
+
+.projects__title {
+  font-size: 42px;
+  margin: 0 0 60px;
+}
+
+.projects__list {
+  list-style-type: none;
+  padding: 0;
+}

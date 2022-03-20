@@ -4,6 +4,10 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/css/');
   eleventyConfig.addWatchTarget('./src/css/');
 
+  // eleventyConfig.addFilter('log', (value) => {
+  //   console.log(value);
+  // });
+
   // Set custom directories for input, output, includes, and data
   return {
     dir: {

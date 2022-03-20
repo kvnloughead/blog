@@ -1,7 +1,11 @@
+@import url(../vendor/normalize.css);
 @import url(./page.css);
 @import url(./header.css);
 @import url(./nav.css);
 @import url(./about.css);
+@import url(./project.css);
+@import url(./projects.css);
+@import url(./tags.css);
 
 h1,
 h2,
@@ -11,9 +15,4 @@ h5,
 h6,
 p {
   margin: 0;
-}
-
-ul,
-li {
-  list-style: none;
 }

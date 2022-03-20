@@ -1,0 +1,26 @@
+.project {
+  display: grid;
+  grid-template-columns: 5fr 4fr;
+  grid-template-areas: 'image title' 'image tags' 'image content';
+  gap: 20px 30px;
+}
+
+.project__title {
+  grid-area: title;
+  font-size: 32px;
+}
+
+.project__image {
+  grid-area: image;
+  width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
+}
+
+.project__content {
+  grid-area: content;
+}
+
+.project p {
+  margin: 0 0 12px;
+}

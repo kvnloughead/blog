@@ -1,4 +1,22 @@
 <section id="projects" class="projects">
   <h2 class="projects__title">Projects</h2>
-  <p>Under construction</p>
+  <ul class="projects__list">
+    {% for project in collections.project | reverse %}
+    <li class="project">
+      <h2 class="project__title">{{ project.data.title }}</h2>
+      <ul class="tags">
+        <li class="tags__item">Python</li>
+        <li class="tags__item">Bash</li>
+        <li class="tags__item">CLI</li>
+        <li class="tags__item">Unix</li>
+      </ul>
+      <img
+        class="project__image"
+        src="{{ project.data.image | url }}"
+        alt="{{ project.data.alt }}"
+      />
+      <div class="project__content">{{ project.templateContent | safe }}</div>
+    </li>
+    {% endfor %}
+  </ul>
 </section>
