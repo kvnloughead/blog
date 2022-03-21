@@ -1,0 +1,33 @@
+{
+  "name": "Kevin Loughead's site",
+  "description": "My personal website and blog. Built with 11ty.",
+  "author": {
+    "name": "Kevin Loughead",
+    "email": "kvnloughead@gmail.com"
+  },
+  "defaultSocialImage": "/images/me.jpg",
+  "headerLinks": [
+    {
+      "text": "Blog",
+      "url": "/blog",
+      "external": false
+    },
+    {
+      "text": "Projects",
+      "url": "/#projects",
+      "external": false
+    },
+    {
+      "text": "Contact",
+      "url": "/#contact",
+      "external": false
+    }
+  ],
+  "socialLinks": [
+    {
+      "text": "GitHub",
+      "url": "https://github.com/kvnloughead",
+      "external": true
+    }
+  ]
+}

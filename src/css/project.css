@@ -1,6 +1,7 @@
 .project {
   display: grid;
-  grid-template-columns: 5fr 4fr;
+  /* grid-template-columns: minmax(400px, 4fr) 5fr; */
+  grid-template-columns: 400px 1fr;
   grid-template-areas: 'image title' 'image tags' 'image content';
   gap: 20px 30px;
 }
