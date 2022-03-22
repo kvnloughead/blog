@@ -1,5 +1,5 @@
 .projects {
-  max-width: 1080px;
+  max-width: 820px;
   margin: 0 auto;
   padding: 20px;
 }
@@ -10,6 +10,9 @@
 }
 
 .projects__list {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
   list-style-type: none;
   padding: 0;
 }

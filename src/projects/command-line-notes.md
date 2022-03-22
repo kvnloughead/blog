@@ -2,6 +2,11 @@
 layout: 'post.njk'
 title: Command Line Notes
 image: /images/projects/cli/command-line-notes.png
+alt: VSCode open with a `git.md` file. The file was opened at the command line with the command `cln git`.
+links:
+  - text: Repo
+    url: https://github.com/kvnloughead/command-line-notes
+    type: github
 ---
 
 A simple command line note taking utility. After a few years of failing to find a note-taking app that satisfied me, I decided to make my own. Allows for creation and editing of markdown notes files from the comfort of the command line, or the editor of your choice.
