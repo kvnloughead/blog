@@ -7,7 +7,10 @@
     name="viewport" content="width=device-width, initial-scale=1.0"/>
     <!-- Grab title from the page data -->
     <title>{{ title }}</title>
-    <link rel="stylesheet" href="/css/index.css"/>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/vendor/normalize.css"/>
     <link rel="preconnect" href="https://fonts.googleapis.com"/>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
     <link
@@ -27,12 +30,7 @@
           {% if page.url == item.url %}
             {% set currentAttributes = 'aria-current="page"' %}
           {% endif %}
-          <a
-            class="nav__link"
-            href="{{ item.url | url }}"
-            {{ currentAttributes | safe }}
-            {{ externalAttributes | safe }}
-          >{{ item.text }}</a>
+          <a class="nav__link" href="{{ item.url | url }}" {{ currentAttributes | safe }} {{ externalAttributes | safe }}>{{ item.text }}</a>
         {% endfor %}
       </nav>
     </header>
@@ -43,4 +41,4 @@
       <h2>Contact Me</h2>
     </footer>
   </body>
-</html></body></html></body></html>
+</html>

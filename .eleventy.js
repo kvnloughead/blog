@@ -1,12 +1,10 @@
 module.exports = function (eleventyConfig) {
   // Pass through src/css/* to output
+  eleventyConfig.addPassthroughCopy('./favicon.ico');
   eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
   eleventyConfig.addPassthroughCopy('./src/css/');
+  eleventyConfig.addPassthroughCopy('./src/vendor/');
   eleventyConfig.addWatchTarget('./src/css/');
-
-  // eleventyConfig.addFilter('log', (value) => {
-  //   console.log(value);
-  // });
 
   // Set custom directories for input, output, includes, and data
   return {
