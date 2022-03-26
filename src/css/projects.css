@@ -18,3 +18,16 @@
   list-style-type: none;
   padding: 0;
 }
+
+@media screen and (max-width: 860px) {
+  .projects__title {
+    min-width: 0;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 860px) {
+  .projects {
+    padding: 20px 10px;
+  }
+}

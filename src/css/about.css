@@ -1,5 +1,5 @@
 .about {
-  padding: 90px 0;
+  padding: 90px 20px;
   max-width: 820px;
   height: 95vh;
   max-height: 1000px;
@@ -16,6 +16,7 @@
 }
 .about__name {
   font-size: 56px;
+  margin: 0 0 12px;
 }
 
 .about__job {
@@ -35,4 +36,38 @@
   grid-area: text;
   font-size: 20px;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 767px) {
+  .about {
+    grid-template-areas: 'about' 'image' 'text';
+    gap: 30px;
+  }
+
+  .about__details {
+    text-align: center;
+  }
+
+  .about__image {
+    justify-self: center;
+    max-width: 250px;
+  }
+
+  .about__description {
+    text-align: justify;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .about__name {
+    font-size: 36px;
+  }
+
+  .about__job {
+    font-size: 20px;
+  }
+
+  .about__description {
+    font-size: 16px;
+  }
 }
