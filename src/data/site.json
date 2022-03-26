@@ -19,15 +19,22 @@
     },
     {
       "text": "Contact",
-      "url": "/#contact",
+      "url": "/#contacts",
       "external": false
     }
   ],
-  "socialLinks": [
+  "contacts": [
     {
       "text": "GitHub",
       "url": "https://github.com/kvnloughead",
-      "external": true
+      "external": true,
+      "icon": "github"
+    },
+    {
+      "text": "Linked In",
+      "url": "https://www.linkedin.com/in/kloughead/",
+      "external": true,
+      "icon": "linkedin"
     }
   ]
 }

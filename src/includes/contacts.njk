@@ -1,0 +1,11 @@
+<ul class="contacts">
+  {% if site.contacts %}
+    {% for contact in site.contacts %}
+      <li>
+        <a href="{{ contact.url }}" rel="{{ 'noopener' if contact.external else '' }}">
+          <i class="fa-brands fa-{{ contact.icon }} fa-2x"></i>
+        </a>
+      </li>
+    {% endfor %}
+  {% endif %}
+</ul>

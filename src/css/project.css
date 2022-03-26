@@ -53,19 +53,3 @@
 .tags {
   grid-area: tags;
 }
-
-.icon {
-  display: inline-block;
-  width: 16px;
-  height: 16px;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-.icon_type_github {
-  background-image: url(../images/icons/github-icon.svg);
-}
-
-.icon_type_demo {
-  background-image: url(../images/icons/up-right-icon.svg);
-}

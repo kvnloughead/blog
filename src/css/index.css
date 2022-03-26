@@ -5,6 +5,11 @@
 @import url(./project.css);
 @import url(./projects.css);
 @import url(./tags.css);
+@import url(./footer.css);
+@import url(./contacts.css);
+
+:root {
+}
 
 h1,
 h2,
