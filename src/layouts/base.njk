@@ -25,27 +25,7 @@
   </head>
   <body class="page">
     <header class="header">
-      <nav class="nav">
-        <a class="nav__link" href="/">Home</a>
-        {% for item in site.headerLinks %}
-          {% set currentAttributes = '' %}
-          {% set externalAttributes = '' %}
-          {% if item.external %}
-            {% set externalAttributes = 'rel="noopener"' %}
-          {% endif %}
-          {% if page.url == item.url %}
-            {% set currentAttributes = 'aria-current="page"' %}
-          {% endif %}
-          <a 
-            class="nav__link"
-            href="{{ item.url | url }}"
-            {{ currentAttributes | safe }}
-            {{ externalAttributes | safe }}
-          >
-            {{ item.text }}
-          </a>
-        {% endfor %}
-      </nav>
+      {% include "nav.njk" %}
     </header>
     <main class="main">
       {{ content | safe }}
