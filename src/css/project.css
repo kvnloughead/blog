@@ -1,4 +1,6 @@
 .project {
+  margin: 0 auto;
+  max-width: 820px;
   display: grid;
   grid-template-columns: 400px 1fr;
   grid-template-rows: auto auto 1fr;

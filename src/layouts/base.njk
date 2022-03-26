@@ -1,19 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
     <!-- Grab title from the page data -->
     <title>{{ title }}</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="stylesheet" type="text/css" href="/css/index.css" />
-    <link rel="stylesheet" type="text/css" href="/vendor/normalize.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="crossorigin" />
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100;0,400;0,900;1,400&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="/vendor/normalize.css"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin="crossorigin"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=libre+baskerville:ital,wght@0,400;0,700;1,400&family=montserrat:ital,wght@0,100;0,400;0,900;1,400&family=roboto+mono:wght@400;700&display=swap"
+      rel="stylesheet"/>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
   </head>
   <body class="page">
     <header class="header">
@@ -28,7 +36,12 @@
           {% if page.url == item.url %}
             {% set currentAttributes = 'aria-current="page"' %}
           {% endif %}
-          <a class="nav__link" href="{{ item.url | url }}" {{ currentAttributes | safe }} {{ externalAttributes | safe }}>
+          <a 
+            class="nav__link"
+            href="{{ item.url | url }}"
+            {{ currentAttributes | safe }}
+            {{ externalAttributes | safe }}
+          >
             {{ item.text }}
           </a>
         {% endfor %}
@@ -38,8 +51,9 @@
       {{ content | safe }}
     </main>
     <footer id="contacts" class="footer">
-      <h2 class="footer__heading">Contact Me</h2>
+      <h2 class="footer__heading">Contact me</h2>
       {% include "contacts.njk" %}
+      <p>Kevin Loughead, 2022</p>
     </footer>
   </body>
 </html>

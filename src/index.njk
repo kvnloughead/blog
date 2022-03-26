@@ -5,13 +5,13 @@ name: 'Kevin Loughead'
 image: /images/me.jpg
 ---
 
-<div class="about">
+<section class="about">
   <div class="about__details">
     <h1 class="about__name">{{ name }}</h1>
     <p class="about__job">Full Stack Software Engineer</p>
     <p class="about__job">Content Manager</p>
   </div>
-  <img src="{{ image | url }}" alt="{{ name }}" class="about__image" />
+  <img src="{{ image | url }}" alt="{{ name }}" class="about__image"/>
   <p class="about__description">
     Hello, world! My name's Kevin and I'm a content manager and author for the
     Practicum by Yandex software engineering bootcamp. I'm also something of a
@@ -19,6 +19,6 @@ image: /images/me.jpg
     command line applications, in a variety of languages. Thanks for stopping
     by!
   </p>
-</div>
+</section>
 
 {% include "projects.njk" %}

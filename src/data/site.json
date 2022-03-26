@@ -28,13 +28,19 @@
       "text": "GitHub",
       "url": "https://github.com/kvnloughead",
       "external": true,
-      "icon": "github"
+      "icon": "fa-brands fa-github"
     },
     {
       "text": "Linked In",
       "url": "https://www.linkedin.com/in/kloughead/",
       "external": true,
-      "icon": "linkedin"
+      "icon": "fa-brands fa-linkedin"
+    },
+    {
+      "text": "Email",
+      "url": "mailto:kvnloughead@gmail.com",
+      "external": true,
+      "icon": "fa-solid fa-envelope"
     }
   ]
 }
