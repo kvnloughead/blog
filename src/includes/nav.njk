@@ -1,22 +1,31 @@
-<nav class="nav">
-  <a class="nav__link" href="/">Home</a>
-  {% for item in site.headerLinks %}
-    {% set currentAttributes = '' %}
-    {% set externalAttributes = '' %}
-    {% if item.external %}
-      {% set externalAttributes = 'rel="noopener"' %}
-    {% endif %}
-    {% if page.url == item.url %}
-      {% set currentAttributes = 'aria-current="page"' %}
-    {% endif %}
-    <a 
+<nav
+  class="nav">
+  <a
+    class="nav__link nav__link_left"
+    href="/">Home</a>
+  <i
+    class="nav__burger fa-solid fa-bars"></i>
+  <i
+    class="nav__x-icon fa-solid fa-x"></i>
+  <ul
+    class="nav__links">
+    {% for item in site.headerLinks %}
+      {% set currentAttributes = '' %}
+      {% set externalAttributes = '' %}
+      {% if item.external %}
+        {% set externalAttributes = 'rel="noopener"' %}
+      {% endif %}
+      {% if page.url == item.url %}
+        {% set currentAttributes = 'aria-current="page"' %}
+      {% endif %}
+      <a
         class="nav__link"
         href="{{ item.url | url }}"
         {{ currentAttributes | safe }}
-        {{ externalAttributes | safe }}
-      >
-      {{ item.text }}
-    </a>
-  {% endfor %}
+        {{ externalAttributes | safe }}>
+        {{ item.text }}
+      </a>
+    {% endfor %}
+  </ul>
 
 </nav>

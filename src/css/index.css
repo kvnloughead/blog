@@ -8,9 +8,6 @@
 @import url(./footer.css);
 @import url(./contacts.css);
 
-:root {
-}
-
 h1,
 h2,
 h3,
@@ -19,4 +16,8 @@ h5,
 h6,
 p {
   margin: 0;
+}
+
+.visible {
+  visibility: visible;
 }

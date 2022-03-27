@@ -1,39 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en">
   <head>
-    <meta charset="utf-8"/>
-    <meta http-equiv="x-ua-compatible" content="ie=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta
+      charset="utf-8" />
+    <meta
+      http-equiv="x-ua-compatible"
+      content="ie=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
 
     <!-- Grab title from the page data -->
+
     <title>{{ title }}</title>
-    <link rel="icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon"/>
-    <link rel="stylesheet" type="text/css" href="/css/index.css"/>
-    <link rel="stylesheet" type="text/css" href="/vendor/normalize.css"/>
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+
+    <link
+      rel="icon"
+      href="favicon.ico"
+      type="image/x-icon" />
+    <link
+      rel="shortcut icon"
+      href="favicon.ico"
+      type="image/x-icon" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/css/index.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/vendor/normalize.css" />
+
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com">
     <link
       rel="preconnect"
       href="https://fonts.gstatic.com"
-      crossorigin="crossorigin"/>
+      crossorigin="crossorigin">
     <link
-      href="https://fonts.googleapis.com/css2?family=libre+baskerville:ital,wght@0,400;0,700;1,400&family=montserrat:ital,wght@0,100;0,400;0,900;1,400&family=roboto+mono:wght@400;700&display=swap"
-      rel="stylesheet"/>
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,400&family=Roboto+Mono:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet">
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"/>
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" />
   </head>
-  <body class="page">
-    <header class="header">
+  <body
+    class="page">
+    <header
+      class="header">
       {% include "nav.njk" %}
     </header>
-    <main class="main">
+    <main
+      class="main">
       {{ content | safe }}
     </main>
-    <footer id="contacts" class="footer">
-      <h2 class="footer__heading">Contact me</h2>
+    <footer
+      id="contacts"
+      class="footer">
+      <h2
+        class="footer__heading">Contact me</h2>
       {% include "contacts.njk" %}
       <p>Kevin Loughead, 2022</p>
     </footer>
+    <script
+      src="{{ '/scripts/nav.js' | url }}"
+      defer="defer"></script>
+
   </body>
 </html>
