@@ -6,10 +6,10 @@ alt: ANT Robotics landing page.
 links:
   - text: Live Site
     url: https://kvnloughead.github.io/ant-robotics/
-    type: demo
+    type: fa-solid fa-up-right-from-square
   - text: Repo
     url: https://github.com/kvnloughead/ant-robotics
-    type: github
+    type: fa-brands fa-github
 ---
 
 A React redesign of the ANT Robotics landing page. Fully responsive and easily configurable by the client by way of a collection of comprehensive (and comprehensible) JavaScript config files.

@@ -6,10 +6,10 @@ alt: NextJS blog app. The blog's name is "TODO - name blog". The article showing
 links:
   - text: Live Site
     url: https://todo-name-blog.vercel.app/
-    type: demo
+    type: fa-solid fa-up-right-from-square
   - text: Repo
     url: https://github.com/kvnloughead/blog
-    type: github
+    type: fa-brands fa-github
 ---
 
 A blog template, based on another template. Written in NextJS using TailwindCSS for styling. Doesn't have a lot of functionality, but does what it says on the tin.

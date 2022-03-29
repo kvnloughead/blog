@@ -6,10 +6,10 @@ alt: Screenshot of a portfolio template.
 links:
   - text: Live Site
     url: https://kloughead.netlify.app/
-    type: demo
+    type: fa-solid fa-up-right-from-square
   - text: Repo
     url: https://github.com/kvnloughead/portfolio
-    type: github
+    type: fa-brands fa-github
 ---
 
 My first portfolio site, written in React with Styled-Components, and easily configurable via JavaScript config files. Major sections include:

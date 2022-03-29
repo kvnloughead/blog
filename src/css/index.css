@@ -1,3 +1,4 @@
+@import url(./main.css);
 @import url(./page.css);
 @import url(./header.css);
 @import url(./nav.css);
@@ -7,16 +8,6 @@
 @import url(./tags.css);
 @import url(./footer.css);
 @import url(./contacts.css);
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p {
-  margin: 0;
-}
 
 .visible {
   visibility: visible;

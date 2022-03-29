@@ -1,0 +1,39 @@
+:root {
+  --background-secondary: rgb(215, 206, 199);
+  --background-main: rgb(215, 206, 199, 0.5);
+  --shadow: rgba(0, 0, 0, 0.4);
+  --text-main: #000;
+  --text-grey: #524e4e;
+  --white: #fff;
+  --off-white: #f9f9f9;
+  --links: #1764b1;
+  --links-visited: #659ed6;
+  --links-hover: #20609f;
+  /* --background-secondary: #c09f80; */
+}
+
+@media (prefers-color-scheme: dark) {
+  /* :root {
+    --text-main: #f9f9f9;
+    --background-main: #1e1e1e;
+    --background-secondary: #2d2d30;
+    --off-white: #3e3e42;
+  } */
+}
+
+/* prettier-ignore */
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+a {
+  color: var(--links);
+}
+
+a:visited {
+  color: var(--links-visited);
+}
+
+a:hover {
+  color: var(--links-hover);
+}

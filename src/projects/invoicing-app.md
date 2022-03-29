@@ -6,10 +6,10 @@ alt: An invoicing app with an open form to edit an invoice.
 links:
   - text: Live Site
     url: https://simple-invoices.netlify.app/
-    type: demo
+    type: fa-solid fa-up-right-from-square
   - text: Repo
     url: https://github.com/kvnloughead/invoice-app/
-    type: github
+    type: fa-brands fa-github
 ---
 
 An invoice app built using [specs from Frontend Mentor](https://www.frontendmentor.io/challenges/invoice-app-i7KaLTQjl). Written in React using Styled-Components.

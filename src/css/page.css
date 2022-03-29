@@ -1,6 +1,7 @@
 .page {
-  font-family: 'Libre Baskerville', Garamond, serif;
   font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  color: var(--text-main);
+  background-color: var(--background-main);
   min-width: 320px;
   width: 100%;
   min-height: 100vh;
