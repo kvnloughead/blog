@@ -3,22 +3,24 @@
   --background-main: rgb(215, 206, 199, 0.5);
   --shadow: rgba(0, 0, 0, 0.4);
   --text-main: #000;
-  --text-grey: #524e4e;
+  --text-grey: #535353;
   --white: #fff;
   --off-white: #f9f9f9;
-  --links: #1764b1;
-  --links-visited: #659ed6;
-  --links-hover: #20609f;
+  --links: rgb(81, 162, 243);
+  --links-visited: rgb(188, 118, 250);
   /* --background-secondary: #c09f80; */
 }
 
 @media (prefers-color-scheme: dark) {
-  /* :root {
+  :root {
     --text-main: #f9f9f9;
+    --text-grey: #d3cbcb;
     --background-main: #1e1e1e;
     --background-secondary: #2d2d30;
     --off-white: #3e3e42;
-  } */
+    --links: rgb(82, 165, 248);
+    --links-visited: #be7cf8;
+  }
 }
 
 /* prettier-ignore */
@@ -35,5 +37,5 @@ a:visited {
 }
 
 a:hover {
-  color: var(--links-hover);
+  text-decoration: none;
 }

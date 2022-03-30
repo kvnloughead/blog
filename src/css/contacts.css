@@ -7,19 +7,23 @@
   margin: 60px 0;
 }
 
-.contacts a {
+.contact__link {
   color: var(--text-main);
 }
 
-.contacts a:visited {
+.contact__link:visited {
   color: var(--text-grey);
 }
 
-.contacts a:hover {
+.contact:hover {
+  transform: rotate(15deg);
+}
+
+.contact:hover .contact__link {
   color: var(--text-main);
 }
 
-.icon {
+/* .icon {
   display: inline-block;
   width: 16px;
   height: 16px;
@@ -37,4 +41,4 @@
 
 .icon_type_demo {
   background-image: url(../images/icons/up-right-icon.svg);
-}
+} */

@@ -1,11 +1,15 @@
-<ul class="contacts">
+<ul
+  class="contacts">
   {% if site.contacts %}
     {% for contact in site.contacts %}
-      <li>
-        <a href="{{ contact.url }}" 
-           rel="{{ 'noopener' if contact.external else '' }}"
-        >
-          <i class="{{ contact.icon }} fa-2x"></i>
+      <li
+        class="contact">
+        <a
+          class="contact__link"
+          href="{{ contact.url }}"
+          rel="{{ 'noopener' if contact.external else '' }}">
+          <i
+            class="{{ contact.icon }} fa-2x"></i>
         </a>
       </li>
     {% endfor %}
