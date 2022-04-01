@@ -3,6 +3,7 @@ layout: 'post.njk'
 title: ANT Robotics Landing&nbsp;Page
 image: /images/projects/ant-robotics.png
 alt: ANT Robotics landing page.
+tags: [JavaScript, React]
 links:
   - text: Live Site
     url: https://kvnloughead.github.io/ant-robotics/

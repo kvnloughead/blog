@@ -1,5 +1,6 @@
 .tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   list-style: none;
   padding: 0;
@@ -9,4 +10,5 @@
   padding: 4px;
   border: 1px #000 solid;
   border-radius: 5px;
+  font-size: 14px;
 }

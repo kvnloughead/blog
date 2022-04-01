@@ -21,6 +21,10 @@
   font-size: 32px;
 }
 
+.project__tags {
+  grid-area: tags;
+}
+
 .project__image {
   grid-area: image;
   width: 100%;
@@ -90,8 +94,4 @@
   .project__content {
     font-size: 16px;
   }
-}
-
-.tags {
-  grid-area: tags;
 }

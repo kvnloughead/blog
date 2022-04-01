@@ -11,15 +11,11 @@
         <h2
           class="project__title">{{ project.data.title | safe }}</h2>
         <ul
-          class="tags">
-          <li
-            class="tags__item">Python</li>
-          <li
-            class="tags__item">Bash</li>
-          <li
-            class="tags__item">CLI</li>
-          <li
-            class="tags__item">Unix</li>
+          class="project__tags tags">
+          {% for tag in project.data.tags | removeSiteLevelTags %}
+            <li
+              class="tags__item">{{ tag }}</li>
+          {% endfor %}
         </ul>
         <img
           class="project__image"

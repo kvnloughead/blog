@@ -3,6 +3,7 @@ layout: 'post.njk'
 title: An Invoicing App
 image: /images/projects/invoices.png
 alt: An invoicing app with an open form to edit an invoice.
+tags: ['JavaScript', 'React', 'Styled-Components']
 links:
   - text: Live Site
     url: https://simple-invoices.netlify.app/

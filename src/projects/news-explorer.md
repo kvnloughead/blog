@@ -3,6 +3,7 @@ layout: 'post.njk'
 title: News Explorer
 image: /images/projects/news-explorer.png
 alt: News Explorer app
+tags: [JavaScript, React, NodeJS, Express, MongoDB, Google Cloud, Nginx]
 links:
   - text: Live Site
     url: https://kvnloughead.github.io/news-explorer-frontend/
