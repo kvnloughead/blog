@@ -3,15 +3,15 @@
     <li>
       <div>
         {% for tag in post.data.tags %}
-          {# {%- if collections.tagList.indexOf(tag) != -1 -%} #}
-          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <a
-            href="{{ tagUrl | url }}">#{{ tag }}</a>
-          {# {%- endif -%} #}
+          {%- if collections.postTags.indexOf(tag) != -1 -%}
+            {% set tagUrl %}/tags/{{ tag }}/{% endset %}
+            <a
+              href="{{ tagUrl | url }}">#{{ tag }}</a>
+          {%- endif -%}
         {% endfor %}
         <time
           datetime="{{ post.date }}">
-          {{ post.date }}
+          {{ post.date | readableDate }}
         </time>
       </div>
       <a

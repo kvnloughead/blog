@@ -3,6 +3,11 @@ layout: base.njk
 permalink: /blog/
 ---
 
-<h1>All Posts</h1>
+<section
+  class="section blog">
+  <h1
+    class="section-title blog__title">All Posts</h1>
 
-{% include "postlist.njk" %}
+  {% include "taglist.njk" %}
+  {% include "postlist.njk" %}
+</blog>

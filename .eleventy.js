@@ -15,7 +15,7 @@ module.exports = function (eleventyConfig) {
     // "site level" tags such as `post` and `project`
     let postTagSet = new Set();
     collection.getAll().forEach((item) => {
-      if ('tags' in item.data) {
+      if ('tags' in item.data && item.data.tags.includes('post')) {
         let tags = item.data.tags;
         // Filters out "site level" tags from `postTagSet`
         tags
@@ -30,6 +30,19 @@ module.exports = function (eleventyConfig) {
     // Removes "site level" tags such as "post" and "project" from an item's
     // list of tags.
     return tags.filter((tag) => !siteLevelTags.includes(tag));
+  });
+
+  eleventyConfig.addFilter('readableDate', function (dateObj) {
+    const options = {
+      year: 'numeric',
+      month: 'short',
+      day: 'numeric',
+    };
+    return dateObj.toLocaleDateString('en-us', options);
+  });
+
+  eleventyConfig.addFilter('log', function (item) {
+    console.log(item);
   });
 
   // Set custom directories for input, output, includes, and data
