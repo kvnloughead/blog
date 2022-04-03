@@ -10,6 +10,8 @@
 @import url(./footer.css);
 @import url(./contacts.css);
 @import url(./blog.css);
+@import url(./posts.css);
+@import url(./post.css);
 
 .visible {
   visibility: visible;

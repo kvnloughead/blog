@@ -1,0 +1,47 @@
+.post {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 60px;
+}
+
+.post__title {
+  text-decoration: none;
+  color: var(--black);
+  font-size: 28px;
+  line-height: 1.5;
+}
+
+.post__title:visited {
+  color: var(--text-grey);
+}
+
+.post__title:hover {
+  text-decoration: underline;
+  color: var(--text-main);
+}
+
+.post__date {
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.post__excerpt {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 8px 0;
+}
+
+.post__link {
+  color: var(--black);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.post__link:visited {
+  color: var(--text-grey);
+}
+
+.post__link:hover {
+  text-decoration: underline;
+  color: var(--text-main);
+}

@@ -1,19 +1,30 @@
 {% macro postbrief(post) %}
-  <li>
-    <div>
-      {% for tag in post.data.tags %}
-        {%- if collections.postTags.indexOf(tag) != -1 -%}
-          {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-          <a
-            href="{{ tagUrl | url }}">#{{ tag }}</a>
-        {%- endif -%}
-      {% endfor %}
-      <time
-        datetime="{{ post.date }}">
-        {{ post.date | readableDate }}
-      </time>
-    </div>
+  <li
+    class="post">
+    <time
+      class="post__date"
+      datetime="{{ post.date }}">
+      {{ post.date | readableDate }}
+    </time>
     <a
-      href="{{ post.url }}">{{ post.data.title }}</a>
+      class="post__title"
+      href="{{ post.url }}">{{ post.data.title }}
+    </a>
+    <ul
+      class="tags">
+      {% for tag in post.data.tags | removeSiteLevelTags %}
+        <li
+          class="tags__item tags__item_place_blog">
+          <a
+            class="tags__link"
+            href="{{ tagUrl | url }}">#{{ tag }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+    <p
+      class="post__excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <a
+      class="post__link"
+      href="{{ post.url }}">Read article</a>
   </li>
 {% endmacro %}

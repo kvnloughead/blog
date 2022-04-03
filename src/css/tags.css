@@ -11,4 +11,23 @@
   border: 1px #000 solid;
   border-radius: 5px;
   font-size: 14px;
+  letter-spacing: 1.5px;
+}
+
+.tags__item_place_blog {
+  border: 1px solid var(--text-main);
+}
+
+.tags__link {
+  color: var(--black);
+  text-decoration: none;
+}
+
+.tags__link:visited {
+  color: var(--text-grey);
+}
+
+.tags__link:hover {
+  text-decoration: underline;
+  color: var(--text-main);
 }
