@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "npx @11ty/eleventy",
-    "start": "rm -rf public && npx @11ty/eleventy --serve"
+    "start": "rm -rf public && npx @11ty/eleventy --serve",
+    "quiet": "rm -rf public && npx @11ty/eleventy --serve --quiet"
   },
   "keywords": [],
   "author": "",

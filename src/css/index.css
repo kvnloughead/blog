@@ -1,4 +1,5 @@
 @import url(./main.css);
+@import url(./mixes.css);
 @import url(./page.css);
 @import url(./header.css);
 @import url(./nav.css);
@@ -8,6 +9,7 @@
 @import url(./tags.css);
 @import url(./footer.css);
 @import url(./contacts.css);
+@import url(./blog.css);
 
 .visible {
   visibility: visible;

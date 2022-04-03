@@ -1,8 +1,8 @@
 ---
 title: Second blog post
-tags: foo bar
+tags: test
 ---
 
-# Second blog post
+## Second post title
 
-Larry Ipsum sadly sat
+Hello, world!
