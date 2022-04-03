@@ -5,9 +5,12 @@ permalink: /blog/
 
 <section
   class="section blog">
-  <h1
-    class="section-title blog__title">All Posts</h1>
+  <header
+    class="blog__header">
+    <h1
+      class="section-title blog__title">All Posts</h1>
+    {% include "taglist.njk" %}
+  </header>
 
-  {% include "taglist.njk" %}
   {% include "postlist.njk" %}
 </blog>

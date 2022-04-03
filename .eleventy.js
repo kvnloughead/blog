@@ -41,6 +41,17 @@ module.exports = function (eleventyConfig) {
     return dateObj.toLocaleDateString('en-us', options);
   });
 
+  eleventyConfig.addFilter('excerpt', function (content) {
+    // Tries to remove all HTML tags and returns text content. Probably won't
+    // work to well unless there are around 200 characters of plain text at
+    // the start of the post.
+    const text = content.replace(
+      /<(?:"[^"]*"['"]*|'[^']*'['"]*|[^'">])+(?<!\/=\s*)>/gi,
+      '',
+    );
+    return text.slice(0, text.lastIndexOf(' ', 200)) + '...';
+  });
+
   eleventyConfig.addFilter('log', function (item) {
     console.log(item);
   });

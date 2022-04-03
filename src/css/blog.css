@@ -1,6 +1,12 @@
 .blog {
-  padding-top: 90px;
+  padding-top: 135px;
+}
+
+.blog__header {
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: 54px;
 }
 
 .blog__title {
+  margin: 0;
 }
