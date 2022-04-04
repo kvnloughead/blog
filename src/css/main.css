@@ -38,3 +38,7 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
+
+.main {
+  padding: 135px 0;
+}

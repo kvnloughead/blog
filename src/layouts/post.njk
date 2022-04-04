@@ -2,4 +2,27 @@
 layout: base.njk
 ---
 
-<article>{{ content | safe }}</article>
+<article
+  class="post">
+  <time
+    class="post__date"
+    datetime="{{ page.date }}">
+    {{ page.date | readableDate }}
+  </time>
+  <h1
+    class="post__title">{{ title }}
+  </h1>
+  <ul
+    class="tags">
+    {% for tag in tags | removeSiteLevelTags %}
+      <li
+        class="tags__item tags__item_place_blog">
+        <a
+          class="tags__link"
+          href="{{ tagUrl | url }}">#{{ tag }}</a>
+      </li>
+    {% endfor %}
+  </ul>
+  <p
+    class="post__excerpt">{{ content | safe }}</p>
+</article>
