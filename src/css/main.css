@@ -8,6 +8,7 @@
   --off-white: #f9f9f9;
   --links: rgb(81, 162, 243);
   --links-visited: rgb(188, 118, 250);
+  --inline-code: #d3cbcb;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -19,6 +20,7 @@
     --off-white: #3e3e42;
     --links: rgb(82, 165, 248);
     --links-visited: #be7cf8;
+    --inline-code: #535353;
   }
 }
 

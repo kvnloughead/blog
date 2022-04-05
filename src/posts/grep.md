@@ -62,7 +62,7 @@ Last, there's that `--` in between `grep` and `-s,`. To see what that does, we'l
 
 ```plain-text
 $ man bash | grep -- ' -- '
-A -- signals the end of options and disables further option processing...
+# A -- signals the end of options and disables further option processing...
 ```
 
 So basically, the `--` is signalling to `grep` that whatever follows it is not a flag. If you don't use it, then `grep` will think that `-s` is a flag. This usage is common to more than a few command line programs. 

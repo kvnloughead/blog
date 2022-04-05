@@ -6,7 +6,7 @@ tags: ['WSL', 'Linux', 'Automation', 'Bash', 'Windows']
 
 [Last time](https://todo-name-blog.vercel.app/posts/wsl-backup), I automated my backup script with a cron job, but realized it still wasn't automated enough. So I had to automate the automation. Well, that's what I started doing, at least. Then I did something easier.
 
-## Starting the cron service with Windows Task Scheduler
+## Start cron service with Windows Task Scheduler
 
 Following this [how to](https://www.howtogeek.com/746532/how-to-launch-cron-automatically-in-wsl-on-windows-10-and-11/) I scheduled a task to automatically start my cron service whenever I rebooted the PC. The steps for this were as follows:
 
@@ -25,7 +25,7 @@ Note that an absolute file path to `service` is provided. I assume this is neces
 
 Well, this worked nicely. I could reboot my device, and my cron job would start automatically. But I still wasn't sure whether this would be sufficient. Would the job still run if the computer was asleep? I'm not sure, actually. But I was sure that it wouldn't run if the computer was off during the cron jobs scheduled time.
 
-## Making sure tasks don't get missed
+## Make sure tasks don't get missed
 
 I knew that there was a tool for this called [anacron](https://opensource.com/article/21/2/linux-automation), and maybe at a later date I will use that. But I realized I could solve the problem with the tools I had at hand: i.e., Windows Task Scheduler, WSL2 and my backup script. All I needed to do was create a new task that would run `/path/to/backup.sh` once a day, at the time of my choosing. That's it, nothing too fancy. Windows will ensure that if the computer is inoperable at the specified time, the task will be run at the next opportunity.
 

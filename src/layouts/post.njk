@@ -3,7 +3,7 @@ layout: base.njk
 ---
 
 <article
-  class="post">
+  class="post section">
   <time
     class="post__date"
     datetime="{{ page.date }}">
@@ -23,6 +23,8 @@ layout: base.njk
       </li>
     {% endfor %}
   </ul>
-  <p
-    class="post__excerpt">{{ content | safe }}</p>
+  <div
+    class="post__content">
+    {{ content | safe }}
+  </div>
 </article>
