@@ -11,11 +11,22 @@ tags: ['WSL', 'Linux', 'Automation', 'Bash', 'Windows']
 Following this [how to](https://www.howtogeek.com/746532/how-to-launch-cron-automatically-in-wsl-on-windows-10-and-11/) I scheduled a task to automatically start my cron service whenever I rebooted the PC. The steps for this were as follows:
 
   1. Open `sudoers` file with `sudo visudo`
-  2. Enter this at the bottom of that file to disable passwords for   starting cron service: `%sudo ALL=NOPASSWD: /usr/sbin/service cron  start`
+  2. Enter this at the bottom of that file to disable passwords for   starting cron service:
+  
+      ```plain
+      %sudo ALL=NOPASSWD: /usr/sbin/service cron  start
+      ```
+
   3. Go to Windows task scheduler
   4. Set up basic task to run when computer starts
 
-Refer to the how to for the specifics of step 4. The main parts of interest here are setting the program/script for the task to run as `C:\Windows\System32\wsl.exe`, and then passing the command to start the service as an argument:
+Refer to the how to for the specifics of step 4. The main parts of interest here are setting the program/script for the task to run as
+
+```plain
+C:\Windows\System32\wsl.exe
+```
+
+and then passing the command to start the service as an argument:
 
 ```plain
 sudo /usr/sbin/service cron start

@@ -59,7 +59,12 @@ Local git integration should work out of the box. When you create your first com
 GitHub integration requires a few additional steps. Assuming that you've already created a note and made a commit, you then need to
 
 1. Create a new repo on Github.
-2. Run `git remote add origin path/to/remote/notes/repo` in your local notes directory to set the remote.
+2. Set the remote repo in your local notes directory with
+
+    ```plain
+    git remote add origin path/to/remote/notes/repo`
+    ```
+
 3. Run `cln push` to push the `main` branch.
 
 Now anytime you want to push, you just run `cln push`.

@@ -56,25 +56,21 @@
 
 .project__content p {
   margin: 0 0 12px;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .project__content ul {
   margin: 0 0 12px;
 }
 
-.project p {
-  font-size: 16px;
-  line-height: 1.5;
-  margin: 0 0 12px;
-}
-
-.project li {
+.project__content li {
   font-size: 16px;
   line-height: 1.5;
   margin-bottom: 4px;
 }
 
-.project code {
+.project__content code {
   padding: 0 5px;
   font-family: 'Roboto Mono', monospace;
   font-size: 16px;
@@ -82,11 +78,11 @@
   background: var(--inline-code);
 }
 
-.project pre code {
+.project__content pre code {
   padding: 0;
 }
 
-.project pre {
+.project__content pre {
   padding: 10px;
   background: var(--inline-code);
   width: 100%;

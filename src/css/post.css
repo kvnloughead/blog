@@ -7,9 +7,13 @@
 .post__title {
   text-decoration: none;
   color: var(--black);
-  font-size: 28px;
-  line-height: 1.5;
+  font-size: 36px;
+  line-height: 1.1;
   margin: 0;
+}
+
+.post__title_place_brief {
+  font-size: 28px;
 }
 
 .post__title:visited {
@@ -51,31 +55,31 @@
   margin-top: 48px;
 }
 
-.post p {
+.post__content p {
   font-size: 18px;
   line-height: 1.5;
   margin: 0 0 12px;
 }
 
-.post h2 {
+.post__content h2 {
   font-size: 30px;
   line-height: 1.1;
   margin: 24px 0 16px;
 }
 
-.post h3 {
+.post__content h3 {
   font-size: 24px;
   line-height: 1.1;
   margin: 19.2px 0 12.8px;
 }
 
-.post li {
+.post__content li {
   font-size: 18px;
   line-height: 1.5;
   margin-bottom: 8px;
 }
 
-.post code {
+.post__content code {
   padding: 0 5px;
   font-family: 'Roboto Mono', monospace;
   font-size: 18px;
@@ -83,13 +87,12 @@
   background: var(--inline-code);
 }
 
-.post pre code {
+/* overwrites the padding on `.post__content code` */
+.post__content pre code {
   padding: 0;
 }
 
-.post pre {
-  padding: 10px;
-  background: var(--inline-code);
-  width: 100%;
-  border-radius: 5px;
+@media screen and (max-width: 600px) {
+  .post__title {
+  }
 }
