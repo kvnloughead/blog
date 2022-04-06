@@ -15,7 +15,7 @@ printf("%f3.1", some_float)
 
 And indeed, the OP mentioned this as a possible solution. But I decided to take the educated guesswork out of the equation and do the right thing — read the docs. And in fact it was quite easy to find the [relevant documentation](http://mumps.sourceforge.net/docs.html#DJUSTIFY), and rather easy to read the documentation too:
 
-```plain-text
+```plain
 Func:   $J[USTIFY]
 Form:   $J(expr,int1[,int2])
 Retn:   expr space padded on the left to a length of int1 characters.

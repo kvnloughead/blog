@@ -12,7 +12,7 @@ My first attempt involved writing a cronjob. I'll summarize that attempt here.
 
 First, run `crontab -e` to open the cronjob editor. You may have to choose a command line editor if you don't have your default set. Nano is probably the easiest choice. This will open a file that looks something like this:
 
-```plain-text
+```plain
 # Edit this file to introduce tasks to be run by cron.
 #
 # Each task to run has to be defined through a single line
@@ -40,7 +40,7 @@ First, run `crontab -e` to open the cronjob editor. You may have to choose a com
 
 These comments are useful. But even more useful is this [diagram from ostechnix](https://ostechnix.com/a-beginners-guide-to-cron-jobs/):
 
-```plain-text
+```plain
 # |-------------- min (0 - 59)
 # | |--------------- hour (0 - 23)
 # | | |---------------- day of month (1 - 31)
@@ -53,7 +53,7 @@ These comments are useful. But even more useful is this [diagram from ostechnix]
 
 I recommend adding it to the file that opens with `crontab -e` for easy reference. So, say you want to run your backup script every day at 20:30. You would write
 
-```plain-text
+```plain
 30 20 * * * path/to/backup.sh
 ```
 
@@ -61,7 +61,7 @@ This means that the backup script will be run every day at 20:30. Nice, right?
 
 But there was _still_ a problem, since on WSL2, the cron service [does not start automatically](https://www.howtogeek.com/746532/how-to-launch-cron-automatically-in-wsl-on-windows-10-and-11/). Instead, you have to start it with
 
-```sh
+```bash
 sudo service cron start
 ```
 

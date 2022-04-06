@@ -70,13 +70,13 @@ The command for the second option is `source ~/.bashrc`, or `. ~/.bashrc` for sh
 
 Next, create a file called `crc.sh` inside `~/bin`. This is the file that will hold our script. But we won't actually be able to execute our script at the command line without changing the permissions of the file. So run this command inside your `~/bin` directory:
 
-```plain-text
+```plain
 chmod u+x crc.sh
 ```
 
 It will allow the file to be executed by the file's owner. If instead you wanted it to be exectuble by anyone, you could run
 
-```plain-text
+```plain
 chmod x crc.sh
 ```
 

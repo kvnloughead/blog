@@ -18,7 +18,7 @@ So, I decided to try again, this time with a bare repo. I had avoided this initi
 
 To understand bare repos, consider what a normal repo looks like. It contains two major parts, the working tree and the `.git` directory.
 
-```plain-text
+```plain
 root/
   working_tree
   .git/

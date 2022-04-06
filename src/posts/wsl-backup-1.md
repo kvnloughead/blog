@@ -10,7 +10,7 @@ This is the first in a three part series detailing my setup for backing up WSL2 
 
 First, I started off by writing a simple bash script, based off of one found in this great article: [Automatic Backups for WSL2](https://stephenreescarter.net/automatic-backups-for-wsl2/#:~:text=Automating%20WSL2%20Backups&text=Using%20the%20Task%20Scheduler%2C%20we,the%20Windows%20Administrative%20Tools%20folder.&text=With%20the%20Task%20Scheduler%2C%20we,backup%20up%20to%20a%20schedule). The core of the script is actually very simple:
 
-```sh
+```bash
 rsync --archive --verbose --delete /home/wsl-username/ /mnt/c/Users/windows-username/wsl2-backup/
 ```
 
@@ -23,7 +23,7 @@ This script copies the content of my WSL user directory to a folder called `wsl2
 
 So I put this one liner in `backup.sh` file on my $PATH and set the destination to be inside my local OneDrive folder.
 
-```sh
+```bash
 #!/bin/bash
 
 rsync --archive --verbose --delete \
@@ -40,7 +40,7 @@ But since then I've made a number of small refinements.
 
 First, as I mentioned above it became quickly apparent that I was backing things up that I had no desire to back up. For instance, at work[^1] I spend a lot of time assisting students with their web development projects. Often I wind up cloning their repos, and general have a number of them in `~/tutor`. And no need to back up all those `node_modules` either. You can exclude directories with the `--exclude` flag:
 
-```sh
+```bash
 rsync --archive --verbose --delete \
   --exclude 'tutor' \
   --exclude 'node_modules' \
@@ -52,7 +52,7 @@ rsync --archive --verbose --delete \
 
 The next problem was that I was always backing up to the same directory, which is not ideal. What if I want to revert to an earlier backup? Too bad, it's been overwritten. I handled in three steps, shown below and explained in comments:
 
-```sh
+```bash
 # I wanted a directory to store all the backups in
 # `-p` suppresses the error if it already exists
 mkdir -p /mnt/c/Users/kvnlo/OneDrive/wsl-backups
@@ -70,7 +70,7 @@ rsync --archive --verbose --delete \
 
 And this is the the script that I'm using now. Here it is without the comments.
 
-```sh
+```bash
 mkdir -p /mnt/c/Users/kvnlo/OneDrive/wsl-backups
 date=$(date '+%m-%d-%Y-h%Hm%M')
 rsync --archive --verbose --delete \

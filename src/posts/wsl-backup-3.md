@@ -17,7 +17,7 @@ Following this [how to](https://www.howtogeek.com/746532/how-to-launch-cron-auto
 
 Refer to the how to for the specifics of step 4. The main parts of interest here are setting the program/script for the task to run as `C:\Windows\System32\wsl.exe`, and then passing the command to start the service as an argument:
 
-```plain-text
+```plain
 sudo /usr/sbin/service cron start
 ```
 

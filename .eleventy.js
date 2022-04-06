@@ -1,7 +1,7 @@
 const siteLevelTags = ['post', 'project'];
+const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {
-  // Pass through src/css/* to output
   eleventyConfig.addPassthroughCopy('./favicon.ico');
   eleventyConfig.addPassthroughCopy({ 'src/images': 'images' });
   eleventyConfig.addPassthroughCopy('./src/css/');
@@ -9,6 +9,8 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/scripts/');
 
   eleventyConfig.addWatchTarget('./src/css/');
+
+  eleventyConfig.addPlugin(syntaxHighlight);
 
   eleventyConfig.addCollection('postTags', function (collection) {
     // Returns array of all post/project level tags, filtering out

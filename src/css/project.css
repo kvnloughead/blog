@@ -62,6 +62,37 @@
   margin: 0 0 12px;
 }
 
+.project p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0 0 12px;
+}
+
+.project li {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+.project code {
+  padding: 0 5px;
+  font-family: 'Roboto Mono', monospace;
+  font-size: 16px;
+  border-radius: 5px;
+  background: var(--inline-code);
+}
+
+.project pre code {
+  padding: 0;
+}
+
+.project pre {
+  padding: 10px;
+  background: var(--inline-code);
+  width: 100%;
+  border-radius: 5px;
+}
+
 @media screen and (max-width: 767px) {
   .project {
     grid-template-columns: 1fr;

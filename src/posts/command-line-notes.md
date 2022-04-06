@@ -16,13 +16,13 @@ After graduating I started learning to program. Part of this process was learnin
 
 You can open a note[^1] for editing with the command
 
-```plain-text
+```plain
 cln edit name-of-note
 ```
 
 This will open a file called `~/.notes/default/git-rebase.md` in your preferred editor.[^2] The directory `~/.cln/notes/` will be created the first time you create a note, and the subdirectory `default/` will be created the first time you make a note without explicitly setting a category. Categories can be specified with the `-c | --category` flag. For example, you could keep todo lists for all your different projects:
 
-```plain-text
+```plain
 cln edit project-x -c todo 
 ```
 
@@ -40,13 +40,13 @@ Tags:
 
 And now you can write down your notes and close the file. You can reopen the file at any time using the same command:
 
-```plain-text
+```plain
 cln edit project-x -c todo 
 ```
 
 But maybe you don't always want to open VSCode to take a look at a note file. Often I like to pop open a note for quick review or revising right in my terminal. Well, there's a flag for that:
 
-```plain-text
+```plain
 cln edit name-of-note -e nano  # opens note in nano
 ```
 

@@ -112,7 +112,7 @@ cat ~/bin/crc/templates/func-component.js > $NAME/$NAME.js
 This new line might seem intimidating, but it isn't so bad. To see what it does,
 let's run just the first part of the command on the command line:
 
-```plain-text
+```plain
 cat ~/bin/crc/templates/func-component.js
 ```
 
@@ -151,7 +151,7 @@ files in place. The second one is used when you are specifying a script for `sed
 to run in the command itself, rather than from a separate file. The first
 non-option argument is this script. It is a command of the form
 
-```plain-text
+```plain
 's/pattern/replace/flags'
 ```
 

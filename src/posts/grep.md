@@ -14,7 +14,7 @@ Here are a few ways to use `grep` — a command line program that allows you to 
 ## 1. Search for a pattern in a file
 The basic syntax is
 
-```plain-text
+```plain
 $ grep <pattern> <filename>
 ```
 
@@ -24,7 +24,7 @@ where `<pattern>` is a string or regex. Running this will print each line in `<f
 
 You aren't limited to searching in single file though, either. So, say you know you defined a function called `DoSomething` somewhere in a project repo, but forget where. Well, 
 
-```plain-text
+```plain
 grep -r DoSomething .
 ```
 
@@ -36,19 +36,19 @@ Of course, you might not want to search through _every_ file in the tree (I'm lo
 
 Another way to use `grep` is to pipe data into it, rather than by passing it a filename as an argument. I'll explain it by way of an example. Suppose you run into a command in some tutorial, or set of installation instructions, and you would like to know a bit more about it.
 
-```plain-text
+```plain
 $ curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 ```
 
 Specifically, you'd like to know what all those flags do. You might break out the `man` page, with
 
-```plain-text
+```plain
 $ man curl 
 ```
 
 and then search through it for the flag. Maybe you remember that in a `man` page you can search for patterns using the `/` key. And actually, that works quite nicely, with the keymapping for the *n*ext and *p*revious actions being refreshingly commonsensical. But this is an article about `grep`, so let's stay on topic. Here's how we can pipe the contents of the `man` page for `curl` into `grep`
 
-```plain-text
+```plain
 $ man curl | grep -- -s,
 ```
 
@@ -60,7 +60,7 @@ searching for. I added the comma to filter out the results a bit. You won't alwa
 
 Last, there's that `--` in between `grep` and `-s,`. To see what that does, we'll actually have to look to the `man` page for `bash` itself.
 
-```plain-text
+```plain
 $ man bash | grep -- ' -- '
 # A -- signals the end of options and disables further option processing...
 ```

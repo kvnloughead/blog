@@ -10,7 +10,7 @@ I'm working on Windows using Windows Subsystem for Linux (WSL2). With some modif
 
 Ok, the first thing we need to do is create a script and make it executable. Let's create it in our `~/bin` directory, where `~` refers to the user directory. Depending on what system you're running, this directory may or may not exist already, so create it if it doesn't already exist.[^1]
 
-```plain-text
+```plain
 cd ~/bin
 code gh-new.sh
 ```
@@ -58,13 +58,13 @@ albeit not a very useful one, since we've hardcoded the name of the repo. But le
 Before we can execute this script, we have to make it executable. You can do
 this with the `chmod` command:
 
-```plain-text
+```plain
 chmod u+x ~/bin/gh-new.sh
 ```
 
 You'll only have to do this once. This gives the user (you) the right to execute the file. Now, let's set up a new local repo and prep it for pushing. You can do so quickly like this:
 
-```plain-text
+```plain
 mkdir temp && cd temp
 git init
 echo "foo" > readme.md
@@ -74,13 +74,13 @@ git commit -m "initial commit"
 
 And now we can run our script. We do so simply by invoking it (using either an absolute or relative filepath):
 
-```plain-text
+```plain
 ~/bin/gh-new.sh
 ```
 
 You should get a printout that looks something like this:
 
-```plain-text
+```plain
 ✓ Created repository <username>/project-name on GitHub
 
 Enumerating objects: 3, done.
@@ -100,7 +100,7 @@ for a password, because it hasn't come up for me yet.
 Now let's make this script a bit more useful, by allowing it to accept an
 arbitrary name for the project as an argument. In general, arguments are given to a command line program as a space separated list. We really only need a single argument, the name of the repo. We would like to invoke our program to function like this:
 
-```plain-text
+```plain
 ~/bin/gh-new.sh arbitrary-name
 ```
 
@@ -120,7 +120,7 @@ The `gh` and `git` commands are commented, so we don't create another pointless
 repo, and the `echo` command simply prints its arguments to the terminal. Now
 invoke the script with two arguments of your choice. For example:
 
-```plain-text
+```plain
 $ ~/bin/gh-new.sh foo bar
 > foo bar
 ```
@@ -160,7 +160,7 @@ with the right-hand side starting with a `$`. But then if you want to _refer_ to
 Alright, the script is ready, so let's test it. Create a new local repo with
 the steps I showed above and then run
 
-```plain-text
+```plain
 ~/bin/gh-new.sh name-of-your-choice
 ```
 
@@ -168,7 +168,7 @@ If you go to Github, you should find a new repo with the name you chose.
 
 There's one more thing to cover before moving on. You might be wondering if you always have to use the file path when calling your script. Well, no you don't, there are ways around that. In fact, I'm sure there are better ways around it than the one I am going to show you. But this is the way I know, and it has broad applicability. You can just set an bash alias. First I'll show you how to do it right in the terminal. This is useful at times, but the alias won't persist to future shell sessions. Here is the syntax:
 
-```plain-text
+```plain
 alias gh-new='~/bin/gh-new.sh'
 ```
 
@@ -182,7 +182,7 @@ alias gh-new='~/bin/gh-new.sh'
 
 and save the file. Now, every new bash session will run this bit of code on startup, so your alias will always be available. But changes made to that file won't effect any current bash sessions. You won't notice it in this case, since we already added the alias via the terminal. But if you make a change to `~/.bashrc` and want to make that change available in the current shell session, all you need to do is run the command
 
-```plain-text
+```plain
 source ~/.bashrc
 ```
 
