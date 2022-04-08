@@ -55,7 +55,7 @@
     </header>
     <main
       class="main">
-      {{ content | safe }}
+      {{ content | parseFootnotes | safe }}
     </main>
     <footer
       id="contacts"

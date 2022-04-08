@@ -17,6 +17,4 @@ A blog template, based on another template. Written in NextJS using TailwindCSS 
 
 - Articles are written in markdown, parsed by RemarkJS
 - Syntax highlighted with PrismJS
-- Hand-crafted[^1] support for footnotes
-
-[^1] One might say "hacky"
+- Hand-crafted support for footnotes

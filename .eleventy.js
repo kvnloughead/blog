@@ -53,6 +53,21 @@ module.exports = function (eleventyConfig) {
     return text.slice(0, text.lastIndexOf(' ', 300)) + '...';
   });
 
+  eleventyConfig.addFilter('parseFootnotes', function (htmlString) {
+    // Converts GitHub markdown footnotes into HTML footnotes
+    const footnoteRegex = /\[\^([0-9])\]/g;
+    const footnotes = new Set();
+    const { fileSlug } = this.ctx.page;
+    htmlString = htmlString.replace(footnoteRegex, (match, $1) => {
+      if (!footnotes.has($1)) {
+        footnotes.add($1);
+        return `<a class="footnote" id="${fileSlug}-backlink-${$1}" href="#${fileSlug}-footnote-${$1}"><sup>(${$1})</sup></a>`;
+      }
+      return `<a a class="footnote" id="${fileSlug}-footnote-${$1}" href="#${fileSlug}-backlink-${$1}">(${$1})</a>`;
+    });
+    return htmlString;
+  });
+
   eleventyConfig.addFilter('log', function (item) {
     console.log(item);
   });
