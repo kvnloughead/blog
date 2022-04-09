@@ -4,7 +4,7 @@ date: '2022-01-01'
 tags: [grep, Bash, Unix, Command Line]
 ---
 
-Here are a few ways to use `grep` — a command line program that allows you to search through text. 
+Here are a few ways to use `grep` — a command line program that allows you to search through text.
 
 ## 1. Search for a pattern in a file
 
@@ -39,7 +39,7 @@ curl -sL https://deb.nodesource.com/setup_16.x -o nodesource_setup.sh
 Specifically, you'd like to know what all those flags do. You might break out the `man` page, with
 
 ```plain
-man curl 
+man curl
 ```
 
 and then search through it for the flag. Maybe you remember that in a `man` page you can search for patterns using the `/` key. And actually, that works quite nicely, with the keymapping for the (n)ext and (p)revious actions being refreshingly commonsensical. But this is an article about `grep`, so let's stay on topic. Here's how we can pipe the contents of the `man` page for `curl` into `grep`
@@ -62,6 +62,8 @@ $ man bash | grep -- ' -- '
 So basically, the `--` is signalling to `grep` that whatever follows it is not a flag. If you don't use it, then `grep` will think that `-s` is a flag. This usage is common to more than a few command line programs.
 
 Now, you might be thinking, "but couldn't we just quote the darn thing?" Well, the answer is yes, but it's tricky. Because quoting in bash is tricky. Maybe I'll write about that in another post.
+
+<hr />
 
 [^1] Available on GNU grep since v2.5.2. ([Source](http://git.savannah.gnu.org/cgit/grep.git/commit/?id=29b030df))
 

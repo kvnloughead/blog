@@ -67,4 +67,6 @@ sudo service cron start
 
 After that, the cron jobs will be executed at the designated times... unless the computer is asleep, or we forgot to start the service again after rebooting. So, we're still not done yet. In the next post, I'll share a solution to this new problem.
 
+<hr />
+
 [^1] [Source](https://www.howtogeek.com/101288/how-to-schedule-tasks-on-linux-an-introduction-to-crontab-files/)

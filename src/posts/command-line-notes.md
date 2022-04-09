@@ -23,25 +23,25 @@ cln edit name-of-note
 This will open a file called `~/.notes/default/git-rebase.md` in your preferred editor.[^2] The directory `~/.cln/notes/` will be created the first time you create a note, and the subdirectory `default/` will be created the first time you make a note without explicitly setting a category. Categories can be specified with the `-c | --category` flag. For example, you could keep todo lists for all your different projects:
 
 ```plain
-cln edit project-x -c todo 
+cln edit project-x -c todo
 ```
 
 The note file will have some YAML metadata at the top, most of which I'm not doing much with at the moment.
 
 ```yaml
----  
-Title: project-x  
-Category: todo  
-Author: Kevin Loughead  
-Date: 2021-12-03  
-Tags:   
----  
+---
+Title: project-x
+Category: todo
+Author: Kevin Loughead
+Date: 2021-12-03
+Tags:
+---
 ```
 
 And now you can write down your notes and close the file. You can reopen the file at any time using the same command:
 
 ```plain
-cln edit project-x -c todo 
+cln edit project-x -c todo
 ```
 
 But maybe you don't always want to open VSCode to take a look at a note file. Often I like to pop open a note for quick review or revising right in my terminal. Well, there's a flag for that:
@@ -61,13 +61,15 @@ GitHub integration requires a few additional steps. Assuming that you've already
 1. Create a new repo on Github.
 2. Set the remote repo in your local notes directory with
 
-    ```plain
-    git remote add origin path/to/remote/notes/repo`
-    ```
+   ```plain
+   git remote add origin path/to/remote/notes/repo`
+   ```
 
 3. Run `cln push` to push the `main` branch.
 
 Now anytime you want to push, you just run `cln push`.
+
+<hr />
 
 [^1] This will require the alias `alias cln='python path/to/command-line-notes/main.py` to be set.
 [^2] Preferred editor can be set in a config file.

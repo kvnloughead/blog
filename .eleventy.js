@@ -1,3 +1,5 @@
+const parseFootnotes = require('./src/scripts/footnotes');
+
 const siteLevelTags = ['post', 'project'];
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
@@ -9,6 +11,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy('./src/scripts/');
 
   eleventyConfig.addWatchTarget('./src/css/');
+  eleventyConfig.addWatchTarget('./src/scripts/');
 
   eleventyConfig.addPlugin(syntaxHighlight);
 
@@ -53,30 +56,7 @@ module.exports = function (eleventyConfig) {
     return text.slice(0, text.lastIndexOf(' ', 300)) + '...';
   });
 
-  eleventyConfig.addFilter('parseFootnotes', function (htmlString) {
-    // Converts GitHub markdown footnotes into HTML footnotes
-    const footnoteRegex = /\[\^([0-9])\]/g;
-    const footnotes = new Set();
-    const { fileSlug } = this.ctx.page;
-    htmlString = htmlString.replace(footnoteRegex, (match, $1) => {
-      if (!footnotes.has($1)) {
-        footnotes.add($1);
-        return `<a class="footnote footnote_head" 
-                   id="${fileSlug}-backlink-${$1}" 
-                   href="#${fileSlug}-footnote-${$1}"
-                >
-                  (${$1})
-                </a>`;
-      }
-      return `<a class="footnote" 
-                 id="${fileSlug}-footnote-${$1}" 
-                href="#${fileSlug}-backlink-${$1}"
-              >
-                (${$1})
-              </a>`;
-    });
-    return htmlString;
-  });
+  eleventyConfig.addFilter('parseFootnotes', parseFootnotes);
 
   eleventyConfig.addFilter('log', function (item) {
     console.log(item);

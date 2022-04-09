@@ -32,4 +32,6 @@ A bare dotfiles repo works in the same way. It allows you to track any files und
 
 For a detailed explanation of how to set this up for yourself, refer to the [README](https://github.com/kvnloughead/dotfiles) in my GitHub repo.
 
+<hr />
+
 [^1] If you're not sure what dotfiles are, or why you'd want to put them under version control, this article is a good starting point.

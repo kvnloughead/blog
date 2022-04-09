@@ -1,15 +1,18 @@
 .footnote {
   text-decoration: none;
-  /* padding-top: 60px;
-  margin-top: -60px;
-  z-index: 0; */
 }
 
 .footnote_head {
   text-decoration: none;
   font-size: 14px;
   vertical-align: super;
-  /* padding-top: 60px;
-  margin-top: -60px;
-  z-index: 0; */
+}
+
+.footnote_foot:first {
+  padding-top: 80px;
+}
+
+.footnote + span {
+  position: relative;
+  top: -104px;
 }

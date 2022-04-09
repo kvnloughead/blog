@@ -83,4 +83,6 @@ rsync --archive --verbose --delete \
 
 But there was still a pretty major issue — I had to rememember to run it. In the next post I'll explain how I set it up to run automatically.
 
+<hr />
+
 [^1] I work at the [Practicum](https://practicum.yandex.com/) Software Engineer bootcamp.

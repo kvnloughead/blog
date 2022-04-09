@@ -87,9 +87,7 @@ called `func-component.js` inside it with the following content:
 import React from 'react';
 
 const COMPONENT = () => {
-  return (
-    <></>
-  );
+  return <></>;
 };
 
 export default COMPONENT;
@@ -143,7 +141,7 @@ Perfect. The last part is to replace the words `COMPONENT` with the value of the
 code and then explain it:
 
 ```bash
-sed -i -e 's/COMPONENT/'$NAME'/g' $NAME/$NAME.js 
+sed -i -e 's/COMPONENT/'$NAME'/g' $NAME/$NAME.js
 ```
 
 Here we are using two flags, `-i` and `-e`. The first one is used for editing
@@ -164,12 +162,14 @@ React component with a single command: `crc ComponentName`. In a future
 installment, In the next installment I'll expand the program to support
 styled-components.
 
-[^1]: If you use the same directory name you will have to delete the `foo`
+<hr />
+
+[^1] If you use the same directory name you will have to delete the `foo`
 directory with `rm -rf foo` before running the script again.
 
-[^2]: `cat` is short for "concatenate". This program is turning 50 this year,
-having [been around](https://en.wikipedia.org/wiki/Cat_(Unix)) since the dawn of
+[^2] `cat` is short for "concatenate". This program is turning 50 this year,
+having [been around](<https://en.wikipedia.org/wiki/Cat_(Unix)>) since the dawn of
 Unix. Make sure to wish it a happy birthday.
 
-[^3]: This is a simplification, of course. For more details, see
- [here](https://tldp.org/LDP/abs/html/io-redirection.html).
+[^3] This is a simplification, of course. For more details, see
+[here](https://tldp.org/LDP/abs/html/io-redirection.html).

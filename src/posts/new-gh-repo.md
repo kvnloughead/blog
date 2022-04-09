@@ -4,9 +4,9 @@ date: '2021-10-13'
 tags: ['Automation', 'Git', 'GitHub', 'Bash']
 ---
 
-Today I'm going to walk you through writing a Bash script to automate a common task: creating a new repo on github, setting it as the remote of a local repo, and making your first push to the new repo.  This will require you to use Github's [command line interface](https://github.com/cli/cli), so make sure you've got that set up before you try this out.
+Today I'm going to walk you through writing a Bash script to automate a common task: creating a new repo on github, setting it as the remote of a local repo, and making your first push to the new repo. This will require you to use Github's [command line interface](https://github.com/cli/cli), so make sure you've got that set up before you try this out.
 
-I'm working on Windows using Windows Subsystem for Linux (WSL2). With some modifications, the same script should be implementable on any *nix OS.
+I'm working on Windows using Windows Subsystem for Linux (WSL2). With some modifications, the same script should be implementable on any \*nix OS.
 
 Ok, the first thing we need to do is create a script and make it executable. Let's create it in our `~/bin` directory, where `~` refers to the user directory. Depending on what system you're running, this directory may or may not exist already, so create it if it doesn't already exist.[^1]
 
@@ -22,7 +22,7 @@ Feel free to change the name of the file. The `sh` stands for "shell", a referen
 ```
 
 This little bit of magic is called a "shebang" line (because `#! === "hashbang" ~== "shebang"`). It tells your computer where to look for the
-program that can execute this script. You might want to double check that this line is correct by entering `which bash` in the terminal. This should tell you where the executable is. And note that the file path starts with  `/bin` , not `~/bin`. The former is for important system executables, the latter is for your own scripts.
+program that can execute this script. You might want to double check that this line is correct by entering `which bash` in the terminal. This should tell you where the executable is. And note that the file path starts with `/bin` , not `~/bin`. The former is for important system executables, the latter is for your own scripts.
 
 After this, we can start writing our script. We'll be assuming that we are in a local git repo that has at least one commit. What we need to do is
 
@@ -69,7 +69,7 @@ mkdir temp && cd temp
 git init
 echo "foo" > readme.md
 git add -A
-git commit -m "initial commit"  
+git commit -m "initial commit"
 ```
 
 And now we can run our script. We do so simply by invoking it (using either an absolute or relative filepath):
@@ -188,6 +188,8 @@ source ~/.bashrc
 
 The `source` command simply executes a file in the current shell environment, so that any changes to that file will take effect.
 
+<hr />
+
 [^1] If you create this directory yourself, you will have to instruct your OS to look there when looking for commands to execute. Otherwise it won't find your program when try to run it. To do this, first open your `~/.bashrc` file in an editor. This is where many of your user settings for bash are stored. If you search it for the string `PATH` and you see a line that looks like this
 
 ```bash
@@ -203,5 +205,6 @@ The command for the second option is `source ~/.bashrc`, or `. ~/.bashrc` for
 short.
 
 [^2] Note that `$0` is mapped to the path of the script that is being run.
+
 [^3] You can only use aliases on the _left_ side of a command. This means
 that you can pass arguments to an alias, but can't pass an alias as an argument.
