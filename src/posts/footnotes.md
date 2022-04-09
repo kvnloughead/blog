@@ -41,7 +41,7 @@ eleventyConfig.addFilter('parseFootnotes', function (htmlString) {
       if (!footnotes.has($1)) {
         footnotes.add($1);
         return `<a id="${fileSlug}-backlink-${$1}" href="#${fileSlug}-footnote-${$1}">
-                  <sup>(${$1})</sup>
+                  (${$1})
                 </a>`;
       }
       return `<a id="${fileSlug}-footnote-${$1}" href="#${fileSlug}-backlink-${$1}">
@@ -56,9 +56,13 @@ This is actually pretty close to what I original wrote for my earlier blog. The 
 
 Both blocks of markup are hyperlinks, set up to link to one another, with corresponding `id` and `href` attributes. I need to differentiate footnotes not only based on their number, but also on their slug, so they don't link to the wrong pages. The number is gathered by `replace`, and is represented by the `$1` argument. This is how `replace` works with regexes — you can specify capture groups as arguments by using the `$` syntax. 
 
-## Accessing the Page Data
+## Accessing the page data
 
 After this, all I needed to do was access the page slug. How to do this was not obvious at all, and took some poking around. I found some GitHub issues complaining about the same thing, and in one it was suggested to use `this.context` to access this data. This didn't quite work for me, but by logging `this` to the terminal I eventually found that `this.ctx.page` contains some useful page data, including the `fileSlug`. So there you are, that's how you do that I guess.
+
+## A note on not using `<sub>` tags
+
+Two problems arose with respect to the fixed navbar I have at the top of my page. The first problem occurred when I tried to use a `<sub>` tag to wrap the text inside the head of the footnotes. These tags are styled with `position: relative` and an offset, which was making them appear above my navbar. It was resolvable with `z-index`, but I figured I'd just remove the `<sub>` tag and use `vertical-align: super` on footnote. I added some classes to my markup strings so I could style them easily.
 
 ## Conclusion and Limitations
 
@@ -66,6 +70,16 @@ With that, I had working footnotes — they just needed some styling. There are 
 
 1. Well, I guess it only allows 10 footnotes. That's plenty!
 2. I'm sure it isn't very robust. I haven't broken it yet, but I will!
+3. When clicking the backlink to return to the head, the link is at the top of the page, and hence obscured by my navbar. I tried to resolve it with pure CSS like this, per a Stack Overflow thread:
+
+    ```css
+    .footnotes {
+      padding-top: 60px;
+      margin-top: -60px;
+    }
+    ```
+
+    This seems to work at first, but you wind up with a `60px` vertical column of invisible blocking padding that prevents interactions underneath it, which is especially problematic at the foot of the footnotes, but potentially a problem everywhere.
 
 [^1] It was non-trivial to figure out how to escape the nunjucks inside the `<article>` tags. The trick was to wrap it in a `{{ "{% raw %}...{% endraw %}" | escape }}` block.[^2]
 

@@ -86,16 +86,18 @@
   border-radius: 5px;
   background: var(--inline-code);
 }
-
+/* 
 .post__content .footnote {
   text-decoration: none;
 }
 
-.post__content sup {
-  /* provides vertical offset footnote backlink, so it's not obscured by nav */
+.post__content .footnote { */
+/* provides vertical offset footnote backlink, so it's not obscured by nav */
+/* position: relative;
   padding-top: 60px;
   margin-top: -60px;
-}
+  z-index: 0;
+} */
 
 /* overwrites the padding on `.post__content code` */
 .post__content pre code {

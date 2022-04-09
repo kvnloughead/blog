@@ -61,9 +61,19 @@ module.exports = function (eleventyConfig) {
     htmlString = htmlString.replace(footnoteRegex, (match, $1) => {
       if (!footnotes.has($1)) {
         footnotes.add($1);
-        return `<a class="footnote" id="${fileSlug}-backlink-${$1}" href="#${fileSlug}-footnote-${$1}"><sup>(${$1})</sup></a>`;
+        return `<a class="footnote footnote_head" 
+                   id="${fileSlug}-backlink-${$1}" 
+                   href="#${fileSlug}-footnote-${$1}"
+                >
+                  (${$1})
+                </a>`;
       }
-      return `<a a class="footnote" id="${fileSlug}-footnote-${$1}" href="#${fileSlug}-backlink-${$1}">(${$1})</a>`;
+      return `<a class="footnote" 
+                 id="${fileSlug}-footnote-${$1}" 
+                href="#${fileSlug}-backlink-${$1}"
+              >
+                (${$1})
+              </a>`;
     });
     return htmlString;
   });

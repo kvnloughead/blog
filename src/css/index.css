@@ -12,6 +12,7 @@
 @import url(./blog.css);
 @import url(./posts.css);
 @import url(./post.css);
+@import url(./footnote.css);
 
 .visible {
   visibility: visible;
