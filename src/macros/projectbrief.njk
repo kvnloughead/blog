@@ -1,0 +1,34 @@
+{% macro projectbrief(project) %}
+  <li
+    class="project">
+    <h2
+      class="project__title">{{ project.data.title | safe }}</h2>
+    <ul
+      class="project__tags tags">
+      {% for tag in project.data.tags | removeSiteLevelTags %}
+        <li
+          class="tags__item">{{ tag }}</li>
+      {% endfor %}
+    </ul>
+    <img
+      class="project__image"
+      src="{{ project.data.image | url }}"
+      alt="{{ project.data.alt }}" />
+    <ul
+      class="project__links">
+      {% for link in project.data.links %}
+        <li>
+          <a
+            class="project__link"
+            href="{{ link.url }}">
+            <i
+              class="{{ link.type }}"></i>
+            {{ link.text }}
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+    <div
+      class="project__content">{{ project.templateContent | safe }}</div>
+  </li>
+{% endmacro %}
