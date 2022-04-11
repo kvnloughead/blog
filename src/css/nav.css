@@ -42,7 +42,7 @@
   text-decoration: none;
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-size: 16px;
+  font-size: var(--fz-md);
   font-weight: 700;
   color: var(--black);
 }

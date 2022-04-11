@@ -1,15 +1,7 @@
 .footnote {
   text-decoration: none;
-}
-
-.footnote_head {
-  text-decoration: none;
-  font-size: 14px;
+  font-size: var(--fz-xs);
   vertical-align: super;
-}
-
-.footnote_foot:first {
-  padding-top: 80px;
 }
 
 .footnote + span {

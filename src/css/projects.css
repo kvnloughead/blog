@@ -6,7 +6,7 @@
 }
 
 .projects__title {
-  min-width: 820px;
+  min-width: var(--content-max-width);
   margin: 135px 0 60px;
 }
 
@@ -22,11 +22,16 @@
   .projects__title {
     min-width: 0;
     width: 100%;
-    max-width: 460px;
   }
 }
 
-@media screen and (max-width: 860px) {
+@media screen and (max-width: 767px) {
+  .projects__title {
+    max-width: 444px;
+  }
+}
+
+@media screen and (max-width: 767px) {
   .projects {
     padding: 20px 10px;
   }

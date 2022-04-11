@@ -1,22 +1,25 @@
 .tags {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 10px 16px;
   list-style: none;
   padding: 0;
   margin: 0;
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  justify-content: center;
+}
+
+.tags_align_left {
+  justify-content: flex-start;
+  gap: 10px;
 }
 
 .tags__item {
-  padding: 4px;
-  border: 1px #000 solid;
+  padding: 3px 7px;
+  background-color: var(--inline-code);
   border-radius: 5px;
-  font-size: 14px;
+  font-size: var(--fz-sm);
   letter-spacing: 1.5px;
-}
-
-.tags__item_place_blog {
-  border: 1px solid var(--text-main);
 }
 
 .tags__link {

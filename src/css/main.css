@@ -1,4 +1,5 @@
 :root {
+  /* Colors */
   --background-secondary: rgb(215, 206, 199);
   --background-main: rgb(215, 206, 199, 0.5);
   --shadow: rgba(0, 0, 0, 0.4);
@@ -9,6 +10,44 @@
   --links: rgb(81, 162, 243);
   --links-visited: rgb(188, 118, 250);
   --inline-code: #d3cbcb;
+
+  /* General sizes */ /* media queries */
+  --fz-5xl: 52px;
+  --fz-4xl: 42px;
+  --fz-3xl: 36px; /* 500 */
+  --fz-2xl: 28px; /* 500 */
+  --fz-xl: 24px;
+  --fz-lg: 20px; /* 500 */
+  --fz-md: 16px; /* 500 */
+  --fz-sm: 14px;
+  --fz-xs: 12px;
+
+  --content-max-width: 820px;
+
+  --size-3xl: 90px;
+  --size-2xl: 70px;
+  --size-xl: 52px; /* yes */
+  --size-lg: 30px; /* yes */
+  --size-md: 20px;
+  --size-sm: 12px;
+  --size-xs: 8px;
+}
+
+@media screen and (max-width: 767px) {
+  :root {
+    --fz-5xl: 32px;
+    --fz-xl: 18px;
+    --fz-lg: 16px;
+
+    --size-xl: 36px;
+    --size-lg: 12px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  :root {
+    --fz-3xl: 28px;
+  }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -42,5 +81,5 @@ a:hover {
 }
 
 .main {
-  padding: 135px 0 0;
+  padding: var(--size-2xl) 0;
 }

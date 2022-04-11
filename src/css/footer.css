@@ -1,7 +1,7 @@
 .footer {
   width: 100%;
   margin: 0 auto;
-  padding: 100px 0 60px;
+  padding: var(--size-3xl) 0 var(--size-2xl);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -9,5 +9,5 @@
 }
 
 .footer__heading {
-  font-size: 28px;
+  font-size: var(--fz-2xl);
 }
