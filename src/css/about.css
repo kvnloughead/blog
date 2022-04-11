@@ -55,7 +55,7 @@
   }
 
   .about__description {
-    text-align: justify;
+    font-size: 16px;
   }
 }
 
@@ -66,9 +66,5 @@
 
   .about__job {
     font-size: 20px;
-  }
-
-  .about__description {
-    font-size: 16px;
   }
 }

@@ -3,7 +3,7 @@ layout: 'post.njk'
 title: React Portfolio Template
 image: /images/projects/react-portfolio.png
 alt: Screenshot of a portfolio template.
-tags: [NextJS, React, JavaScript, Styled-Components]
+tags: [NextJS, React, Styled-Components]
 links:
   - text: Live Site
     url: https://kloughead.netlify.app/

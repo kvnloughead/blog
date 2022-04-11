@@ -1,8 +1,8 @@
 ---
 layout: 'post.njk'
 title: Command Line Notes
-image: /images/projects/cli/command-line-notes.png
-alt: VSCode open with a `git.md` file. The file was opened at the command line with the command `cln git`.
+# image: /images/projects/cli/command-line-notes.png
+# alt: VSCode open with a `git.md` file. The file was opened at the command line with the command `cln git`.
 tags: [Bash, Git, Python, Unix]
 links:
   - text: Repo
