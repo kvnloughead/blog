@@ -13,6 +13,11 @@
       "external": false
     },
     {
+      "text": "Tags",
+      "url": "/tags",
+      "external": false
+    },
+    {
       "text": "Projects",
       "url": "/#projects",
       "external": false

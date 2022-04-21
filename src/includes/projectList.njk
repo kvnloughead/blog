@@ -1,14 +1,14 @@
-{% from "../macros/projectbrief.njk" import projectbrief with context %}
+{% from "../macros/projectTemplate.njk" import projectTemplate with context %}
 
 <section
   id="projects"
   class="projects">
   <h2
-    class="section-title projects__title">Projects</h2>
+    class="section__title projects__title">Projects</h2>
   <ul
     class="projects__list">
     {% for project in collections.project | reverse %}
-      {{ projectbrief(project) }}
+      {{ projectTemplate(project) }}
     {% endfor %}
   </ul>
 </section>

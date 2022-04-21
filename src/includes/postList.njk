@@ -1,0 +1,10 @@
+{% from "../macros/postExcerpt.njk" import postExcerpt with context %}
+
+<ul
+  class="posts">
+  {# tag is passed from tags.njk, but not from blog.njk #}
+  {% set tag = tag if tag else '' %}
+  {% for post in collections.post | reverse | filterByTag(tag) %}
+    {{ postExcerpt(post) }}
+  {% endfor %}
+</ul>

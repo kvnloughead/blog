@@ -5,18 +5,23 @@ pagination:
   alias: tag
   filter:
     - all
-    - nav
     - post
-    - posts
+    - project
+    - postTags
     - tagList
   addAllPagesToCollections: true
 layout: base.njk
-permalink: /tags/{{ tag }}/
+permalink: /tags/{{ tag | tagToSlug }}/
 eleventyComputed:
   title: "{{ tag | title }}"
-  description: "All posts tagged “{{ tag }}”"
+  description: "All posts tagged '{{ tag }}'"
 ---
-<h1>{{ tag | title }}</h1>
 
-{% set postslist = collections[tag] %}
-{% include "postlist.njk" %}
+<section class="section">
+  <header class="section__header">
+    <h1 class="section__title">{{ description }}</h1>
+  </header>
+  {% include "postList.njk" %}
+
+</section>
+

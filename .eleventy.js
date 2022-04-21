@@ -58,6 +58,22 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter('parseFootnotes', parseFootnotes);
 
+  eleventyConfig.addFilter('tagToSlug', function (tag) {
+    // Converts tag into a kebab-case path slug
+    return tag.toLowerCase().replace(' ', '-');
+  });
+
+  eleventyConfig.addFilter('filterByTag', function (posts, tag) {
+    // Filters posts by tag. If tag is an empty string, then
+    // all posts are returned
+    if (tag === '') return posts;
+    return posts.filter((post) => {
+      return post.data.tags
+        .map((tag) => tag.toLowerCase())
+        .includes(tag.toLowerCase());
+    });
+  });
+
   eleventyConfig.addFilter('log', function (item) {
     console.log(item);
   });

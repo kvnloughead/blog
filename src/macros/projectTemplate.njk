@@ -1,4 +1,4 @@
-{% macro projectbrief(project) %}
+{% macro projectTemplate(project) %}
 <li class="project{{ '' if project.data.image else ' project_no-image' }}">
   <h2 class="project__title">{{ project.data.title | safe }}</h2>
   <ul class="project__tags tags">

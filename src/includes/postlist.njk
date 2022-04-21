@@ -1,8 +1,0 @@
-{% from "../macros/postbrief.njk" import postbrief with context %}
-
-<ul
-  class="posts">
-  {% for post in collections.post | reverse %}
-    {{ postbrief(post) }}
-  {% endfor %}
-</ul>

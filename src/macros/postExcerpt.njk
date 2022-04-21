@@ -1,4 +1,4 @@
-{% macro postbrief(post) %}
+{% macro postExcerpt(post) %}
   <li
     class="post">
     <time
@@ -6,17 +6,10 @@
       datetime="{{ post.date }}">
       {{ post.date | readableDate }}
     </time>
-    <ul
-      class="tags tags_align_left">
-      {% for tag in post.data.tags | removeSiteLevelTags %}
-        <li
-          class="tags__item tags__item_place_blog">
-          <a
-            class="tags__link"
-            href="{{ tagUrl | url }}">{{ tag }}</a>
-        </li>
-      {% endfor %}
-    </ul>
+
+    {% set tags = post.data.tags | removeSiteLevelTags %}
+    {% include "tagList.njk" %}
+
     <a
       class="post__title post__title_place_brief"
       href="{{ post.url }}">{{ post.data.title }}

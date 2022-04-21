@@ -1,7 +1,7 @@
 const burger = document.querySelector('.nav__burger');
 const navlinks = document.querySelector('.nav__links');
 const xIcon = document.querySelector('.nav__x-icon');
-const mobileWidth = 500;
+const mobileWidth = 550;
 
 renderMenuIcon();
 

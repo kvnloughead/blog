@@ -1,0 +1,19 @@
+.section {
+  padding: var(--size-md) var(--size-md) var(--size-3xl);
+  max-width: var(--content-max-width);
+  margin: 0 auto;
+}
+
+.section__header {
+  border-bottom: 1px solid var(--text-main);
+  padding-bottom: var(--size-xl);
+}
+
+.section__title {
+  font-size: var(--fz-4xl);
+  line-height: 1.5;
+}
+
+.section__title_place_all-tags {
+  margin: 0 0 var(--size-md);
+}
