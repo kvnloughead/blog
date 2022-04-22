@@ -1,4 +1,5 @@
 ---
+order: 2
 layout: 'post.njk'
 title: Command Line Notes
 # image: /images/projects/cli/command-line-notes.png

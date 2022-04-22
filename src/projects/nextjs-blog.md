@@ -1,4 +1,5 @@
 ---
+order: 4
 layout: 'post.njk'
 title: NextJS Blog
 image: /images/projects/nextjs-blog.png

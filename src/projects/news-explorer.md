@@ -1,4 +1,5 @@
 ---
+order: 1
 layout: 'post.njk'
 title: News Explorer
 image: /images/projects/news-explorer.png

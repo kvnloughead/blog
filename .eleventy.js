@@ -1,4 +1,5 @@
 const parseFootnotes = require('./src/scripts/footnotes');
+const { maxProjects } = require('./src/scripts/constants');
 
 const siteLevelTags = ['post', 'project'];
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
@@ -72,6 +73,25 @@ module.exports = function (eleventyConfig) {
         .map((tag) => tag.toLowerCase())
         .includes(tag.toLowerCase());
     });
+  });
+
+  eleventyConfig.addFilter('sortProjects', function (projects) {
+    // Sorts projects based on their [optional] `order` property. Does not
+    // require you to give `order` to all projects. Works as follows:
+    //    First, projects with `order` < maxProjects are sorted, ascending
+    //    Next, projects without an `order` are placed arbitrarily
+    //    Last, projects with an `order` >= maxProjects are sorted, ascending
+    const sorted = projects.sort((p1, p2) => {
+      const [a, b] = [p1.data.order, p2.data.order];
+      if (a && b) {
+        return a - b;
+      } else if ((a && a !== maxProjects) || b == maxProjects) {
+        return -1;
+      } else {
+        return 1;
+      }
+    });
+    return sorted;
   });
 
   eleventyConfig.addFilter('log', function (item) {
