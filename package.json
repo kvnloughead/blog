@@ -4,9 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "npx @11ty/eleventy",
-    "start": "rm -rf public && npx @11ty/eleventy --serve",
-    "quiet": "rm -rf public && npx @11ty/eleventy --serve --quiet"
+    "build": "ELEVENTY_ENV=production node -r esm node_modules/.bin/eleventy",
+    "dev": "ELEVENTY_ENV=development node -r esm node_modules/.bin/eleventy --serve",
+    "debug": "DEBUG=* node -r esm node_modules/.bin/eleventy"
   },
   "keywords": [],
   "author": "",
@@ -17,6 +17,7 @@
     "typescript": "^4.6.2"
   },
   "devDependencies": {
-    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0"
+    "@11ty/eleventy-plugin-syntaxhighlight": "^4.0.0",
+    "esm": "^3.2.25"
   }
 }
