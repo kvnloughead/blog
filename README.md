@@ -1,6 +1,7 @@
 # An Eleventy Blog and Portfolio Site
 
-My personal blog and portfolio site[^1].
+My personal blog and portfolio site.I largely followed [this tutorial](https://sia.codes/posts/itsiest-bitsiest-eleventy-tutorial/) for the initial setup, and [this one](https://11ty.rocks/posts/create-your-first-basic-11ty-website/) to get the basic routes set up. I've also referred to the [eleventy-duo] blog template, to help me understand how all the pieces fit together.
+
 
 ## Features
 
@@ -16,7 +17,4 @@ My personal blog and portfolio site[^1].
 
 ## To do
 
-- Filter posts by tag
 - Search for posts
-
-[^1] I largely followed [this tutorial](https://sia.codes/posts/itsiest-bitsiest-eleventy-tutorial/) for the initial setup, and [this one](https://11ty.rocks/posts/create-your-first-basic-11ty-website/) to get the basic routes set up. I've also referred to the [eleventy-duo] blog template, to help me understand how all the pieces fit together.
