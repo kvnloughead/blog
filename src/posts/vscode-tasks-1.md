@@ -1,5 +1,5 @@
 ---
-title: 'Automating Tasks in Rails with VSCode Tasks'
+title: 'Automating Tasks in Rails with VS Code'
 date: '2022-06-04'
 tags: ['Rails', 'Bash', 'Automations', 'VSCode']
 ---
