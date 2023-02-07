@@ -1,7 +1,7 @@
 ---
 title: 'On Yargs Autocompletion'
-excerpt: |
-  Yargs provides some rather nice autocompletion for commands and flags with some minimal setup, but I wanted autocompletion of positional arguments for one of the commands in the CLI clipboard manager I'm making. This clipboard manager (cb) basically does one thing: let's me quickly save the contents of my clipboard, and retrieve the clips by name.
+# excerpt: |
+#   Yargs provides some rather nice autocompletion for commands and flags with some minimal setup, but I wanted autocompletion of positional arguments for one of the commands in the CLI clipboard manager I'm making. This clipboard manager (cb) basically does one thing: let's me quickly save the contents of my clipboard, and retrieve the clips by name.
 coverImage: ''
 date: '2023-02-07'
 author:
@@ -9,6 +9,7 @@ author:
   picture: ''
 ogImage:
   url: ''
+tags: [Bash, CLI, NodeJS, JavaScript, Yargs]
 ---
 
 [Yargs](https://yargs.js.org/) provides some rather nice autocompletion for commands and flags with some minimal setup, but I wanted autocompletion of positional arguments for one of the commands in the CLI [clipboard manager](https://github.com/kvnloughead/clipboard-manager) I'm making. This clipboard manager (`cb`) basically does one thing: let's me quickly save the contents of my clipboard, and retrieve them by name.
