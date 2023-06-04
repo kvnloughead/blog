@@ -1,6 +1,5 @@
 ---
 order: 5
-layout: 'post.njk'
 title: React Portfolio Template
 image: /images/projects/react-portfolio.png
 alt: Screenshot of a portfolio template.

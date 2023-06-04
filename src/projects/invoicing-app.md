@@ -1,5 +1,4 @@
 ---
-layout: 'post.njk'
 title: An Invoicing App
 image: /images/projects/invoices.png
 alt: An invoicing app with an open form to edit an invoice.

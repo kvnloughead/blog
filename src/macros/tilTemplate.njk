@@ -1,0 +1,23 @@
+{% macro tilTemplate(post) %}
+  <li
+    class="post til">
+    <time
+      class="post__date"
+      datetime="{{ post.date }}">
+      {{ post.date | readableDate }}
+    </time>
+
+    {% set tags = post.data.tags | removeSiteLevelTags %}
+    {% include "tagList.njk" %}
+
+    <a
+      class="post__title post__title_place_brief"
+      href="{{ post.url }}">{{ post.data.title }}
+    </a>
+    
+    <div
+      class="post__content">
+      {{ post.templateContent | parseFootnotes | safe }}
+    </div>
+  </li>
+{% endmacro %}

@@ -1,6 +1,5 @@
 ---
 order: 4
-layout: 'post.njk'
 title: NextJS Blog
 image: /images/projects/nextjs-blog.png
 alt: NextJS blog app. The blog's name is "TODO - name blog". The article showing is called "Automating the Creation of New GitHub Repos.

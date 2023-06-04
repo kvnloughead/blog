@@ -22,6 +22,7 @@
       "url": "/#projects",
       "external": false
     },
+    { "text": "TIL", "url": "/blog/til", "external": false },
     {
       "text": "Contact",
       "url": "/#contacts",

@@ -1,7 +1,7 @@
 const parseFootnotes = require('./src/scripts/footnotes');
 const { maxProjects } = require('./src/scripts/constants');
 
-const siteLevelTags = ['post', 'project'];
+const siteLevelTags = ['post', 'project', 'til'];
 const syntaxHighlight = require('@11ty/eleventy-plugin-syntaxhighlight');
 
 module.exports = function (eleventyConfig) {

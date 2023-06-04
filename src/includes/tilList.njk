@@ -1,0 +1,10 @@
+{% from "../macros/tilTemplate.njk" import tilTemplate with context %}
+
+<ul
+  class="posts">
+  {# tag is passed from tags.njk, but not from blog.njk #}
+  {% set tag = tag if tag else '' %}
+  {% for post in collections.til | reverse | filterByTag(tag) %}
+    {{ tilTemplate(post) }}
+  {% endfor %}
+</ul>

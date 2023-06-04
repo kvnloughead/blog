@@ -1,0 +1,5 @@
+{
+  "layout": "post",
+  "permalink": "/blog/til/{{ page.fileSlug }}/",
+  "tags": "til"
+}

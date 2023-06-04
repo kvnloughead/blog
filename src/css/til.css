@@ -1,0 +1,9 @@
+.til {
+  margin-bottom: var(--size-3xl);
+  border-bottom: solid 0.1px var(--shadow-light);
+}
+
+.til .post__content {
+  margin-top: var(--size-sm);
+  margin-bottom: var(--size-md);
+}
