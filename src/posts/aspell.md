@@ -3,6 +3,8 @@ category: posts
 author: Kevin Loughead
 date: '2023-07-01T18:56:03.511Z'
 title: 'A Spellchecking CLI'
+excerpt: |
+  There is a rather nice command line spell checker called `aspell`. In this article I explain the basics.
 ---
 
 There is a rather nice command line spell checker called `aspell`. Basic usage is fairly simple.

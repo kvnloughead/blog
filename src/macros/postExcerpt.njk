@@ -16,7 +16,13 @@
     </a>
     
     <p
-      class="post__excerpt">{{ post.templateContent | excerpt | safe }}</p>
+      class="post__excerpt">
+        {% if post.data.excerpt %}
+          {{ post.data.excerpt }}
+        {% else %}
+          {{ post.templateContent | excerpt | safe }}
+        {% endif %}
+    </p>
     <a
       class="post__link"
       href="{{ post.url }}">Read article</a>
