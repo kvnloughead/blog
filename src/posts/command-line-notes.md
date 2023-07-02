@@ -10,7 +10,7 @@ After graduating I started learning to program. Part of this process was learnin
 
 ## Introduction
 
-[Command Line Notes](https://github.com/kvnloughead/command-line-notes) is minimal Markdown notetaking app, written in Python. It's primary function is allowing rapid fire opening of Markdown note files, that you can edit in the comfort of your preferred text editor. It collects the notes on your local file system, provides commands allowing you to organize and search through your notes, and to sync your notes with a repo on GitHub.
+[Command Line Notes](https://github.com/kvnloughead/command-line-notes) is minimal Markdown note-taking app, written in Python. It's primary function is allowing rapid fire opening of Markdown note files, that you can edit in the comfort of your preferred text editor. It collects the notes on your local file system, provides commands allowing you to organize and search through your notes, and to sync your notes with a repo on GitHub.
 
 ## Creating and Editing Notes
 

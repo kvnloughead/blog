@@ -30,7 +30,7 @@ $ cd /mnt/c && "echo %USERPROFILE%"
 C:\Users\kvnlo
 ```
 
-Unfortunately, I couldn't find a way to save this output to a variable. I'm sure this was attributable to my weak grasp of how variables work in bash, but a number of reasonable guesses failed to produce the results I wanted. I won't put my ignorance on display by sharing examples. Suffice it to say that after a short while I decided to try a different tactic. I realized there was another way to supress the unwanted output in that command, keeping only the user directory — I just needed to send the error to the void:
+Unfortunately, I couldn't find a way to save this output to a variable. I'm sure this was attributable to my weak grasp of how variables work in bash, but a number of reasonable guesses failed to produce the results I wanted. I won't put my ignorance on display by sharing examples. Suffice it to say that after a short while I decided to try a different tactic. I realized there was another way to suppress the unwanted output in that command, keeping only the user directory — I just needed to send the error to the void:
 
 ```plain
 $ cmd.exe /c "echo %USERPROFILE%" 2> /dev/null

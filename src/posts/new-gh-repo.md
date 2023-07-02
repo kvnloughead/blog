@@ -4,7 +4,7 @@ date: '2021-10-13'
 tags: ['Automation', 'Git', 'GitHub', 'Bash']
 ---
 
-Today I'm going to walk you through writing a Bash script to automate a common task: creating a new repo on github, setting it as the remote of a local repo, and making your first push to the new repo. This will require you to use Github's [command line interface](https://github.com/cli/cli), so make sure you've got that set up before you try this out.
+Today I'm going to walk you through writing a Bash script to automate a common task: creating a new repo on GitHub, setting it as the remote of a local repo, and making your first push to the new repo. This will require you to use GitHub's [command line interface](https://github.com/cli/cli), so make sure you've got that set up before you try this out.
 
 I'm working on Windows using Windows Subsystem for Linux (WSL2). With some modifications, the same script should be implementable on any \*nix OS.
 
@@ -172,7 +172,7 @@ There's one more thing to cover before moving on. You might be wondering if you 
 alias gh-new='~/bin/gh-new.sh'
 ```
 
-Now whenever you enter what's on the left side of the equals sign, `gh-new`, it will be replaced with what's inside the quotes on the righthand side, so we can run our script with `gh-new repo-name`.[^3]
+Now whenever you enter what's on the left side of the equals sign, `gh-new`, it will be replaced with what's inside the quotes on the right-hand side, so we can run our script with `gh-new repo-name`.[^3]
 
 Now we are at the last step — making this alias persist. We can do this in our `~/.bashrc` file, so open that in your editor of choice. This file has all sorts of settings pertaining to bash. Scroll all the way down to the bottom, add the alias
 

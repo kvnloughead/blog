@@ -4,7 +4,7 @@ date: '2022-04-07'
 tags: ['Eleventy', 'JavaScript', 'Nunjucks', 'Markdown']
 ---
 
-When making my first blog site with NextJS I used [Remark](https://github.com/gnab/remark) to parse the Markdown into HTML. This was nice, and worked fairly well, but I ran into issues with footnotes, which Remark doesn't handle by default. There is a plug-in that supports GitHub flavoured Markdown footnotes, but I had trouble getting it to work. For fun, I decided to implement it myself, and it worked fine for my purposes.
+When making my first blog site with NextJS I used [Remark](https://github.com/gnab/remark) to parse the Markdown into HTML. This was nice, and worked fairly well, but I ran into issues with footnotes, which Remark doesn't handle by default. There is a plug-in that supports GitHub flavored Markdown footnotes, but I had trouble getting it to work. For fun, I decided to implement it myself, and it worked fine for my purposes.
 
 Now with this shiny new Eleventy blog, I adapted my solution into a filter. I'll explain how I made it work in this post, and note a few difficulties I encountered along the way.
 
@@ -107,6 +107,6 @@ So I moved the `id` to a new `<span>` tag that immediately proceeds the anchor, 
 
 <hr />
 
-[^1] It was non-trivial to figure out how to escape the nunjucks inside the `<article>` tags. The trick was to wrap it in a `{{ "{% raw %}...{% endraw %}" | escape }}` block.[^2]
+[^1] It was non-trivial to figure out how to escape the Nunjucks inside the `<article>` tags. The trick was to wrap it in a `{{ "{% raw %}...{% endraw %}" | escape }}` block.[^2]
 
 [^2] And to learn how to escape that `{{ "{% raw %}...{% endraw %}" | escape }}` block, see this [blog post](https://www.constantvallee.dev/posts/escape-nunjucks-in-markdown/).

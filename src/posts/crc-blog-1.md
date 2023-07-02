@@ -74,7 +74,7 @@ Next, create a file called `crc.sh` inside `~/bin`. This is the file that will h
 chmod u+x crc.sh
 ```
 
-It will allow the file to be executed by the file's owner. If instead you wanted it to be exectuble by anyone, you could run
+It will allow the file to be executed by the file's owner. If instead you wanted it to be executable by anyone, you could run
 
 ```plain
 chmod x crc.sh

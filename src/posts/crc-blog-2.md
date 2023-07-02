@@ -118,7 +118,7 @@ See how the text from the file is printed to the screen? That's what `cat` does,
 it outputs the contents of a file[^2]. Next we have that `>` symbol. This is the
 redirection operator. It basically says "take the output of the program on the
 left and insert it into the file on the right"[^3]. We can try this out by
-running the following code at the commmand line:
+running the following code at the command line:
 
 ```bash
 echo "redirect me" > a-file.txt

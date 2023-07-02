@@ -10,7 +10,7 @@ To kill a process by name, rather than job number or PID, you can use `pkill`. F
 pkill code
 ```
 
-Today I accidentally turned on the redshift program, and it was flickering annoyingly. I started to look for a solution online, but then remembered:
+Today I accidentally turned on the Redshift program, and it was flickering annoyingly. I started to look for a solution online, but then remembered:
 
 ```plain
 pkill redshift

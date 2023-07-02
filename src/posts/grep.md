@@ -50,7 +50,7 @@ man curl | grep -- -s,
 
 The results are pretty effective in this case — we learn that `-s` stands for 'silent'. Not much more to say about that. You probably won't always get the answers you're seeking quite that easily, though. Try it out for the other flags in this command, `-L` and `-o`. The results are rather disjointed, which makes the already awfully hard to read `man` pages that much less scrutable[^2]. So, frankly this use case is maybe not the most useful, sorry about that. But it was good for illustrative purposes.
 
-Now, there are a few things I'd like to point out about the command we just used. First, the pipe character, `|`. This character takes the output of the program on its left and "pipes" it into the program on its left. So, we're feeding the text of the `man` page to grep. And the characters `-s,` is what we are searching for. I added the comma to filter out the results a bit. You won't always be able to use the same tactic, since the formatting conventions are not commpletely uniform.
+Now, there are a few things I'd like to point out about the command we just used. First, the pipe character, `|`. This character takes the output of the program on its left and "pipes" it into the program on its left. So, we're feeding the text of the `man` page to grep. And the characters `-s,` is what we are searching for. I added the comma to filter out the results a bit. You won't always be able to use the same tactic, since the formatting conventions are not completely uniform.
 
 Last, there's that `--` in between `grep` and `-s,`. To see what that does, we'll actually have to look to the `man` page for `bash` itself.
 
@@ -59,7 +59,7 @@ $ man bash | grep -- ' -- '
 # A -- signals the end of options and disables further option processing...
 ```
 
-So basically, the `--` is signalling to `grep` that whatever follows it is not a flag. If you don't use it, then `grep` will think that `-s` is a flag. This usage is common to more than a few command line programs.
+So basically, the `--` is signaling to `grep` that whatever follows it is not a flag. If you don't use it, then `grep` will think that `-s` is a flag. This usage is common to more than a few command line programs.
 
 Now, you might be thinking, "but couldn't we just quote the darn thing?" Well, the answer is yes, but it's tricky. Because quoting in bash is tricky. Maybe I'll write about that in another post.
 
