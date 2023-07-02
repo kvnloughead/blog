@@ -85,4 +85,4 @@ But there was still a pretty major issue — I had to rememember to run it. In t
 
 <hr />
 
-[^1] I work at the [Practicum](https://practicum.com/) Software Engineer bootcamp.
+[^1] I work at the [TripleTen](https://practicum.com/) Software Engineer bootcamp.
