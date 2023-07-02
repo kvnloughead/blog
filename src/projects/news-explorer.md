@@ -1,5 +1,5 @@
 ---
-order: 1
+order: 2
 title: News Explorer
 image: /images/projects/news-explorer.png
 alt: News Explorer app
