@@ -28,9 +28,8 @@
 
 .nav__burger {
   visibility: hidden;
-  position: absolute;
-  top: 16px;
-  right: 16px;
+  position: relative;
+  left: 12px;
 }
 
 .nav__x-icon {

@@ -82,7 +82,7 @@
 
 .project__content code {
   padding: 0 5px;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace
+  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
   font-size: var(--fz-md);
   border-radius: 5px;
   background: var(--inline-code);
@@ -102,14 +102,9 @@
 @media screen and (max-width: 767px) {
   .project {
     gap: 12px;
-    grid-template-columns: 1fr;
-    grid-template-areas:
-      'title'
-      'links'
-      'image'
-      'image'
-      'content'
-      'tags';
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 420px;
     padding: 30px 12px;
   }
@@ -131,5 +126,9 @@
   }
   .project__image {
     margin: 30px 0;
+  }
+
+  .project__title {
+    text-align: center;
   }
 }

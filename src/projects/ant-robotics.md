@@ -1,6 +1,6 @@
 ---
 order: 99
-title: ANT Robotics Landing&nbsp;Page
+title: ANT Robotics Landing Page
 image: /images/projects/ant-robotics.png
 alt: ANT Robotics landing page.
 tags: [JavaScript, React]
