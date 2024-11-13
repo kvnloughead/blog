@@ -1,7 +1,7 @@
 :root {
   /* Colors */
-  --background-secondary: rgb(215, 206, 199);
   --background-main: rgb(215, 206, 199, 0.5);
+  --background-secondary: rgb(215, 206, 199, 0.7);
   --shadow: rgba(0, 0, 0, 0.4);
   --shadow-light: rgba(0, 0, 0, 0.15);
   --text-main: #000;
