@@ -54,7 +54,7 @@
     </header>
     <main
       class="main">
-      {{ content | safe }}
+      {{ content | parseCodeBlocks | safe }}
     </main>
     <footer
       id="contacts"
@@ -67,6 +67,8 @@
     <script
       src="{{ '/scripts/nav.js' | url }}"
       defer="defer"></script>
-
+    <script
+      src="{{ '/scripts/code-copy-client.js' | url }}"
+      defer="defer"></script>
   </body>
 </html>

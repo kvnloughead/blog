@@ -57,7 +57,8 @@ module.exports = function (eleventyConfig) {
     return text.slice(0, text.lastIndexOf(' ', 300)) + '...';
   });
 
-  eleventyConfig.addFilter('parseFootnotes', parseFootnotes);
+  eleventyConfig.addFilter("parseFootnotes", parseFootnotes);
+  eleventyConfig.addFilter("parseCodeBlocks", parseCodeBlocks);
 
   eleventyConfig.addFilter('tagToSlug', function (tag) {
     // Converts tag into a kebab-case path slug
