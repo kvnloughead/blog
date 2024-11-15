@@ -82,7 +82,7 @@
 
 .post__content code {
   padding: 0 5px;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: var(--fz-md);
   border-radius: 5px;
   background: var(--inline-code);

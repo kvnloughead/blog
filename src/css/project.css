@@ -4,10 +4,10 @@
   grid-template-columns: 400px 1fr;
   grid-template-rows: auto auto 1fr;
   grid-template-areas:
-    'title title'
-    'image content'
-    'image content'
-    'tags tags';
+    "title title"
+    "image content"
+    "image content"
+    "tags tags";
   gap: 40px 30px;
   background-color: var(--off-white);
   padding: 50px 20px;
@@ -17,10 +17,10 @@
 
 .project_no-image {
   grid-template-areas:
-    'title title'
-    'content content'
-    'content content'
-    'tags tags';
+    "title title"
+    "content content"
+    "content content"
+    "tags tags";
 }
 
 .project__title {
@@ -82,7 +82,7 @@
 
 .project__content code {
   padding: 0 5px;
-  font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+  font-family: Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
   font-size: var(--fz-md);
   border-radius: 5px;
   background: var(--inline-code);

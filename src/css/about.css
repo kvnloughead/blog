@@ -5,7 +5,7 @@
   margin: 0 auto;
   display: grid;
   align-items: center;
-  grid-template-areas: 'about image' 'text text';
+  grid-template-areas: "about image" "text text";
   gap: var(--size-xl);
 }
 
