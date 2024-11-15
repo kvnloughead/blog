@@ -4,19 +4,19 @@
 
 .code-block__copy-button {
   position: absolute;
-  top: 0.5rem;
-  right: 0.5rem;
+  top: 0.25rem;
+  right: 0.25rem;
   padding: 0.25rem 0.5rem;
-  font-size: 0.875rem;
-  border: 1px solid #ccc;
+  font-size: var(--fz-xs);
+  border: 1px solid var(--inline-code-alpha50);
   border-radius: 4px;
-  background: rgba(255, 255, 255, 0.1);
-  color: inherit;
+  background: #272822;
+  color: var(--inline-code);
+  transition: color 0.3s, border-color 0.2s;
   cursor: pointer;
-  opacity: 0.7;
-  transition: opacity 0.2s;
 }
 
 .code-block__copy-button:hover {
-  opacity: 1;
+  color: var(--off-white);
+  border-color: var(--off-white-alpha50);
 }

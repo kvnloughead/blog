@@ -13,6 +13,7 @@
 @import url(./post.css);
 @import url(./til.css);
 @import url(./footnote.css);
+@import url(./code-block.css);
 
 .visible {
   visibility: visible;

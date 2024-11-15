@@ -8,9 +8,11 @@
   --text-grey: #535353;
   --white: #fff;
   --off-white: #f9f9f9;
+  --off-white-alpha50: #f9f9f980;
   --links: rgb(81, 162, 243);
   --links-visited: rgb(188, 118, 250);
   --inline-code: #d3cbcb;
+  --inline-code-alpha50: #d3cbcb80;
 
   /* General sizes */ /* media queries */
   --fz-5xl: 52px;
