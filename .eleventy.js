@@ -1,4 +1,4 @@
-const parseFootnotes = require("./src/scripts/footnotes");
+const parseFootnotes = require("./_11ty/filters/parseFootnotes.js");
 const parseCodeBlocks = require("./_11ty/filters/parseCodeBlocks.js");
 const { maxProjects } = require("./src/scripts/constants");
 
