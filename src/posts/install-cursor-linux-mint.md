@@ -60,8 +60,8 @@ If you want to set up an entry for this in your start menu, you can do the follo
 3. Retrieve the icon from the AppImage
 
    ```plain
-   sudo cd /opt
-   ./cursor.appimage --appimage-extract
+   cd /opt
+   sudo ./cursor.appimage --appimage-extract
    ```
 
    This creates a directory `squashfs-root`. Grab the icon it contains with
