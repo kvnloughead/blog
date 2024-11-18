@@ -67,7 +67,13 @@ If you want to set up an entry for this in your start menu, you can do the follo
    This creates a directory `squashfs-root`. Grab the icon it contains with
 
    ```plain
-   mv squashfs-root/cursor.png .
+   sudo mv squashfs-root/cursor.png .
+   ```
+
+   But the cursor.png is a symlink to the actual icon, so you can't delete the `squashfs-root` directory. Another option is to copy the icon itself to the current directory.
+
+   ```plain
+   sudo mv squashfs-root/usr/share/icons/512x512/apps/cursor.png .
    ```
 
    Then delete the `squashfs-root` directory.
