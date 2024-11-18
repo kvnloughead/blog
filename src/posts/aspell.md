@@ -10,7 +10,7 @@ excerpt: |
 There is a rather nice command line spell checker called `aspell`. Basic usage is fairly simple.
 
 ```plain
-$ aspell check file
+aspell check file
 ```
 
 This opens the file in an interactive spell checker. Consider this amusingly misspelled HTML file as an example.
@@ -37,8 +37,8 @@ We have many options available to us. In this case, replacing the word with a mo
 Note that if the file were not given the `.html` extension, then `aspell` would spell check it like a normal document, which is problably not what we are going for:
 
 ```plain
-$ mv mispelled.html mispelled
-$ aspell check mispelled
+mv mispelled.html mispelled
+aspell check mispelled
 ```
 
 <img src="/images/posts/aspell-1.png" 
@@ -48,7 +48,7 @@ However, there's a flag for that.
 
 ```plain
 # the flag tells aspell that the file should be considered HTML
-$ aspell check -H mispelled
+aspell check -H mispelled
 ```
 
 One small gripe I have about the program is that it doesn't seem possible to replace a mispelled word with an empty string. You either have to ignore it, or replace it with something. Although perhaps I just haven't figured out how to do it yet.

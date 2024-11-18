@@ -102,7 +102,7 @@ the text as is. Change your script to match the following:
 ```bash
 NAME=$1
 mkdir $
-$ touch $NAME/styles.css
+touch $NAME/styles.css
 touch $NAME/$NAME.js
 cat ~/bin/crc/templates/func-component.js > $NAME/$NAME.js
 ```
@@ -132,7 +132,7 @@ removing the second `touch` command:
 ```bash
 NAME=$1
 mkdir $NAME
-$ touch $NAME/styles.css
+touch $NAME/styles.css
 cat ~/bin/templates/func-component.js > $NAME/$NAME.js
 ```
 

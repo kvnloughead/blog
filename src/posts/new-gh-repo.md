@@ -120,6 +120,8 @@ The `gh` and `git` commands are commented, so we don't create another pointless
 repo, and the `echo` command simply prints its arguments to the terminal. Now
 invoke the script with two arguments of your choice. For example:
 
+<!-- no-copy -->
+
 ```plain
 $ ~/bin/gh-new.sh foo bar
 > foo bar

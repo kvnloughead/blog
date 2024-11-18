@@ -8,11 +8,15 @@ Frequently I find myself looking for a better way to keep track of my todo list,
 
 But one command seemed to me to be lacking from the CLI: there's no command to edit a todo, only to replace it.
 
+<!-- no-copy -->
+
 ```bash
-$ todo.sh replace ITEM# "Updated ITEM"
+$ todo.sh replace ITEM # "Updated ITEM"
 ```
 
 This subcommand works by feeding it the todo's unique item number, which can be found by searching/filtering the todo list with the `todo.sh list` subcommand:
+
+<!-- no-copy -->
 
 ```bash
 $ todo.sh list        # lists all todo items
@@ -23,6 +27,8 @@ $ todo.sh list @phone # contexts are prepended with a @
 
 But it would be nice to be able to actually _edit_ a todo item. Maybe add a context, or some notes to it. I found this [user created edit action](https://github.com/mbrubeck/todo.txt-cli/blob/master/todo.actions.d/edit) that allows you to open your file of todos in your `$EDITOR` like this:
 
+<!-- no-copy -->
+
 ```bash
 $ todo.sh edit         # opens $TODO_DIR/todo.txt in $EDITOR
 $ todo.sh edit report  # opens $TODO_DIR/report.txt in $EDITOR
@@ -32,10 +38,12 @@ And this is nice, but it wasn't what I was looking for, so I rewrote it. Here's 
 
 If you pass it a number that corresponds to one of your todo items, it prompts you to update the entry:
 
+<!-- no-copy -->
+
 ```bash
 $ todo.sh edit
 Current entry:  write blog post +blog
-Updated entry:  write blog post +blog█
+Updated entry:  write blog post +blog
 ```
 
 The block at the end of the second line is where your cursor will be. So you can easily append to the item, or do more complicated edits[^2]. In addition to this, if no argument is passed, `$TODO_DIR/todo.txt` will be opened in your `$EDITOR`.

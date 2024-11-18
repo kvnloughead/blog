@@ -12,6 +12,8 @@ I manage my dotfiles with a bare git repository, as described in [this post](htt
 
 The `type command-name` command is useful in this regard. If `command-name` is an alias, it will tell you what it is aliased to. If it is a built-in, it will give you the path to its binary.
 
+<!-- no-copy -->
+
 ```plain
 $ type gst
 gst is aliased to `git stash`
@@ -21,6 +23,8 @@ cp is /usr/bin/cp
 ```
 
 If it's a function, it'll spit out the whole function for you:
+
+<!-- no-copy -->
 
 ```plain
 getremote is a function

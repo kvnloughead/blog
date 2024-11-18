@@ -7,6 +7,8 @@ date: '2023-06-03T10:42:42.865Z'
 
 Instead of creating new files with `touch`, you can use the redirection operator:
 
+<!-- no-copy -->
+
 ```plain
 # this works
 $ touch foo.txt
@@ -18,5 +20,5 @@ $ > foo.txt
 The redirection operator is also more generally capable, because you can add text to the file that you are creating.
 
 ```plain
-$ echo node_modules > .gitignore
+echo node_modules > .gitignore
 ```

@@ -12,6 +12,8 @@ alias clip="xclip -sel clipboard"
 
 It works fine when piping.
 
+<!-- no-copy -->
+
 ```plain
 $ someCommand | clip
 ```
