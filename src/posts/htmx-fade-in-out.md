@@ -2,7 +2,7 @@
 title: "Fade In/Out Transitions in HTMX"
 category: posts
 author: Kevin Loughead
-date: "2024-09-28T14:19:05.954Z"
+date: "2025-09-28T14:19:05.954Z"
 tags: ["htmx", "css"]
 ---
 

@@ -1,14 +1,8 @@
 ---
 pagination:
-  data: collections
+  data: collections.postTags
   size: 1
   alias: tag
-  filter:
-    - all
-    - post
-    - project
-    - postTags
-    - tagList
   addAllPagesToCollections: true
 layout: base.njk
 permalink: /tags/{{ tag | tagToSlug }}/

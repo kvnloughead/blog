@@ -63,7 +63,7 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("tagToSlug", function (tag) {
     // Converts tag into a kebab-case path slug
-    return tag.toLowerCase().replace(" ", "-");
+    return tag.toLowerCase().replace(/\s+/g, "-").replace(/[^a-z0-9\-]/g, "");
   });
 
   eleventyConfig.addFilter("filterByTag", function (posts, tag) {
